@@ -7,11 +7,10 @@ function Launchpage()
     return(
     <div>
         <div className="section1">
-        <h1>Welcome to Herovired</h1>
-        <h3>A HERO Group Company</h3>
+        <h3>We create those who will create the future.</h3>
         </div>
         <div className="section2">
-            <h3>We create those who will create the future.</h3>
+            
             
 <h4>Mission</h4>
 <p>Hero Vired is a learning company on a mission to not only re-imagine the way we learn, but also build a better and brighter future. We’re here to equip our learners with the knowledge, skills, and expertise they need to find success. We do this through a deeply engaged and holistic learning experience, and empower them to transform careers.

@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Switch, Route, useNavigate } from "react-router-dom";
-import Dashboard from "./Dashboard.js";
+
 function Loginpage()
 { function handlechange()
     {
       
            return(
-            <Dashboard></Dashboard>
-
+         
+<></>
            );
         
    
