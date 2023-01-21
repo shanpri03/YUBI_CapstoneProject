@@ -6,14 +6,30 @@ import Loginpage from './Components/Loginpage';
 import Useraccount from './Components/Useraccount';
 import Head from './Components/Dashboard/Header/Head';
 import Subheader from './Components/Dashboard/Subheader/Subheader';
+import Appliedjobs from './Components/Dashboard/Jobs/Appliedjobs';
+import Alljobs from './Components/Dashboard/Jobs/Alljobs';
+import Eligiblejobs from './Components/Dashboard/Jobs/Eligiblejobs';
+import Shortlisted from './Components/Dashboard/Application/Shortlisted';
+import Rejected from './Components/Dashboard/Application/Rejected';
+import Interviewing from './Components/Dashboard/Application/Interviewing';
+import Offered from './Components/Dashboard/Application/Offered';
 
 
 function App() {
   return (
     <div>
-  <Head></Head>
-  <Subheader></Subheader>
-  </div>
+     <Offered></Offered>
+      </div>
+     
+ /* <Appliedjobs></Appliedjobs>
+ <Alljobs></Alljobs> 
+ <Eligiblejobs></Eligiblejobs>
+ <Shortlisted></Shortlisted>
+ <Interviewing></Interviewing>
+  <Rejected></Rejected>*/
+ 
+  
+  
 //     <div>
       
 //          <h1>Welcome to Herovired</h1>
@@ -47,7 +63,8 @@ function App() {
 //         </li>
 //       </ul>
 //     </Router>
-      
+      // <Head></Head>
+  //<Subheader></Subheader> 
   
   );
 }
