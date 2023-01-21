@@ -19,6 +19,8 @@ function App() {
   return (
     <div>
      <Offered></Offered>
+
+     
       </div>
      
  /* <Appliedjobs></Appliedjobs>

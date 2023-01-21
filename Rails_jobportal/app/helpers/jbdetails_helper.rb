@@ -1,0 +1,2 @@
+module JbdetailsHelper
+end
