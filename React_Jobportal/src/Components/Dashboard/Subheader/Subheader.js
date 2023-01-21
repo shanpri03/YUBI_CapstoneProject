@@ -123,12 +123,28 @@ export default function Subheader(){
                  
                 </div>
                 <div className="head5">
-                  <h4>JPC - 1692 Developer</h4>
-                  <div className="subhead5">
-                     <div><img src=""alt=""></img>
+                  
+                 <div className="head5t">
+                    <h3> JPC 1692 Developer Jobs</h3>
+                    <div className="head5ta">
+                   <div className="head5da">
+                     <img src="Images\Location.png" alt="All jobs Logo"/>
+                    Mumbai, Maharashtra
+                     </div>
+                     <div className="head5db">
+                     <img src="Images\Location.png" alt="All jobs Logo"/>
                      <p>Mumbai, Maharashtra</p>
                      </div>
-                     <div><img src=""alt=""></img>
+                     <div className="head5dd">
+                     <img src="Images\Location.png" alt="All jobs Logo"/>
+                     <p>Mumbai, Maharashtra</p>
+                     </div>
+                     <div className="head5dd">
+                     <img src="Images\Location.png" alt="All jobs Logo"/>
+                     <p>Mumbai, Maharashtra</p>
+                     </div>
+                     </div>
+                     {/* <div><img src=""alt=""></img>
                      <p>Full Time</p>
                      </div>
                      <div><img src=""alt=""></img>
@@ -136,11 +152,12 @@ export default function Subheader(){
                      </div>
                      <div><img src=""alt=""></img>
                      <p>CEIPAL</p>
-                     </div>
+                     </div> */}
                       </div>
                 </div>
-                 </div>
-        
+                </div>
+               
+            
         
     );
 }
