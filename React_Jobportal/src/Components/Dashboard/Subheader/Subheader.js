@@ -120,8 +120,24 @@ export default function Subheader(){
                 <p>11-1-2003</p>
                 </div>
                 </div>
-               
-                    
+                 
+                </div>
+                <div className="head5">
+                  <h4>JPC - 1692 Developer</h4>
+                  <div className="subhead5">
+                     <div><img src=""alt=""></img>
+                     <p>Mumbai, Maharashtra</p>
+                     </div>
+                     <div><img src=""alt=""></img>
+                     <p>Full Time</p>
+                     </div>
+                     <div><img src=""alt=""></img>
+                     <p>150-180$</p>
+                     </div>
+                     <div><img src=""alt=""></img>
+                     <p>CEIPAL</p>
+                     </div>
+                      </div>
                 </div>
                  </div>
         
