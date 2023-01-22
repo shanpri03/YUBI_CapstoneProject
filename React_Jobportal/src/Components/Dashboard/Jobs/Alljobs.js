@@ -1,77 +1,13 @@
 import React from "react"
-import "./Subheader.css"
-export default function Subheader(){
+import Head from "../Header/Head";
+function Alljobs()
+{
     return(
-        <div className="subheader">
-            <div className="head1">
-                <h4>Snapshots</h4>
-                </div>
-                <div className="sections">
-                <div className="sec1a">
-                     
-                    <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                    <div className="sec1acol">
-                    <h5>All Jobs</h5>
-                    <p>100</p>
-                    </div>
-                 </div>
-                 <div className="sec1b">
-                 <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                 <div className="sec1bcol">
-                    <h5>Eligible Jobs</h5>
-                    <p>80</p>
-                 </div>
-                 </div>
-                 <div className="sec1c">
-                 
-                 <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                 <div className="sec1ccol">
-                    <h5>Applied Jobs</h5>
-                    <p>50</p>
-                    </div>
-                 </div>
-                 </div>
-
-                 <div className="head2">
-                <h4>My Applications</h4>
-                </div>
-                <div className="sections">
-                <div className="sec1a">
-                     
-                    <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                    <div className="sec1acol">
-                    <h5>Shortlisted</h5>
-                    <p>100</p>
-                    </div>
-                 </div>
-                 <div className="sec1b">
-                 <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                 <div className="sec1bcol">
-                    <h5>Interviewing</h5>
-                    <p>80</p>
-                 </div>
-                 </div>
-                 <div className="sec1c">
-                 
-                 <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                 <div className="sec1ccol">
-                    <h5>Rejected</h5>
-                    <p>50</p>
-                    </div>
-                 </div>
-                 <div className="sec1d">
-                 
-                 <img src="Images\All Jobs.png" alt="All jobs Logo"/> 
-                 <div className="sec1dcol">
-                    <h5>Offer Received</h5>
-                    <p>5</p>
-                    </div>
-                 </div>
-                 </div>
-<br></br>
-
-                <div className="head3">
-                    <h4>All Jobs</h4>
+     
+<div className="test">
+<Head></Head>
+    <div>
+<h4>Jobs in Domain</h4>
                     <input type="text" placeholder = "Title,Client,Location"></input>
                     <button name =  "Search" >Search</button>
                 </div>
@@ -180,7 +116,7 @@ export default function Subheader(){
                 </div>
                 </div>
               </div> 
-              </div>   
-        
+</div>
     );
 }
+export default Alljobs;
