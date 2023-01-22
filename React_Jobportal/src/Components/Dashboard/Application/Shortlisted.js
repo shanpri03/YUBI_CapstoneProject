@@ -1,7 +1,18 @@
 import React from "react";
 import "./Shortlisted.css";
 import Head from "../Header/Head";
+import React, { useState, useEffect ,useContext} from "react"
+import axios from "axios"
 function Shortlisted() {
+    let [jobData, setJobData] = useState([])
+    useEffect(() => {
+        const fetchData = async () => {
+          let res = await axios.get("http://127.0.01:3001/jbdetails")
+          console.log("res", res.data)
+          setJobData(res.data)
+        }
+        fetchData()
+      }, []) 
     return (
         <div className="test">
         <Head></Head>
@@ -58,7 +69,21 @@ function Shortlisted() {
                          
                            </div>
                            <br></br>
-                           <div className="tab">
+
+                           <h3>Jobs Shortlisted for your profile.</h3>
+        <table>
+          <tr>
+          <td>JOB CODE</td><td>JOB TITLE</td> <td>LOCATION</td> <td>POSTED DATE</td> <td>APPLIED DATE</td> <td>STATUS</td></tr>{jobData.length ? (
+            jobData.map((ele) => (
+              <tr>
+                <td>{ele.id}</td> <td>{ele.bookname}</td> <td>{ele.bookauthor}</td><td>{ele.bookquantity}</td>
+              </tr>
+            ))
+          ) : (
+            <div> No data</div>
+          )}
+        </table>
+                           {/* <div className="tab">
                            <table id="stable">
                             <thead>
                             <tr>
@@ -152,8 +177,11 @@ function Shortlisted() {
                                 <td>Shortlisted</td> 
                             </tr>
                             </tbody>
-                          </table>
-                          </div>
+                          </table> 
+    </div>*/}
+
+
+
                            </div>
     );
 }
