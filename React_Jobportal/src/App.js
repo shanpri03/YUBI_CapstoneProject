@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Launchpage from "./Components/Launchpage.js";
@@ -11,8 +10,11 @@ import Subheader from './Components/Dashboard/Subheader/Subheader';
 function App() {
   return (
     <div>
-  <Head></Head>
-  <Subheader></Subheader>
+  <Routes>
+  <Route path='/' element={<Launchpage/>}></Route>
+  {/* <Subheader></Subheader> */}
+  </Routes>
+ 
   </div>
 //     <div>
       
