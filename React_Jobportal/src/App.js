@@ -17,29 +17,32 @@ import Offered from './Components/Dashboard/Application/Offered';
 function App() {
   return (
     <div>
-<<<<<<< HEAD
-  <Routes>
-  <Route path='/' element={<Launchpage/>}></Route>
-  {/* <Subheader></Subheader> */}
-  </Routes>
- 
-  </div>
-=======
-     <Offered></Offered>
 
-     
+  {/* <Routes>
+  <Route path='/' element={<Launchpage/>}></Route>
+  {/* <Subheader></Subheader>
+  </Routes> */}
+ 
+ 
+ {/*
+ <Shortlisted></Shortlisted>
+ <Rejected></Rejected>
+ <Interviewing></Interviewing>
+ <Offered></Offered>
+*/}
+
+<Eligiblejobs></Eligiblejobs>
       </div>
      
  /* <Appliedjobs></Appliedjobs>
+  
  <Alljobs></Alljobs> 
- <Eligiblejobs></Eligiblejobs>
- <Shortlisted></Shortlisted>
- <Interviewing></Interviewing>
-  <Rejected></Rejected>*/
+ 
+ */
  
   
   
->>>>>>> 61c65910583ba0fd970b5eebd403d6a210e15d19
+
 //     <div>
       
 //          <h1>Welcome to Herovired</h1>

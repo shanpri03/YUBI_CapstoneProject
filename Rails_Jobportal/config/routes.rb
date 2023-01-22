@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'login', to:"login#index"
   post 'login', to:"login#create"
   get 'logout', to:"login#destroy"
+resources :joblist
 end
