@@ -71,3 +71,4 @@ group :test do
   gem "webdrivers"
 end
 gem 'rack-cors'
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'

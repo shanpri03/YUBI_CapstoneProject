@@ -12,8 +12,6 @@ function Alljobs()
                     <button name =  "Search" >Search</button>
                 </div>
                 <br></br>
-              
-
                 <div className="head4">
                 <div class="Job">
                 <span>All Jobs</span>
@@ -83,9 +81,7 @@ function Alljobs()
                      <div className="head5tb">
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat nulla ligula, vitae sodales quam dignissim venenatis. Phasellus et aliquet neque. Praesent sed rutrum urna. Etiam luctus egestas arcu a lobortis. Cras consectetur accumsan magna, vel mollis tellus dapibus et. Phasellus sit amet nisl sed libero ornare molestie. Duis sollicitudin porta orci non varius. Aenean elit ipsum, ullamcorper a ullamcorper mattis, commodo sed ipsum. Proin elementum dui nibh, nec hendrerit liber
  </p>
-                     </div>
-                     
-                     
+                     </div>        
                       <div className="head6">
                       <div className="head6t1">
                     <h3> JPC 1692 Developer Jobs</h3>

@@ -1,0 +1,17 @@
+.profile{
+width :100%;
+height: 100%;
+padding: 0;
+margin: 0;
+
+}
+
+.prof-header{
+    width:100%;
+    height: 10%;
+}
+
+.prof-header >img{
+    width: 5%;
+    height: 70%;
+}

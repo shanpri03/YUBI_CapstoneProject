@@ -1,7 +1,7 @@
 import React from "react";
 import "./Shortlisted.css";
 import Head from "../Header/Head";
-import React, { useState, useEffect ,useContext} from "react"
+import  { useState, useEffect ,useContext} from "react"
 import axios from "axios"
 function Shortlisted() {
     let [jobData, setJobData] = useState([])
