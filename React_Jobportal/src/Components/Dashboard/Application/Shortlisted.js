@@ -1,18 +1,23 @@
-import React from "react";
+
 import "./Shortlisted.css";
 import Head from "../Header/Head";
-import  { useState, useEffect ,useContext} from "react"
-import axios from "axios"
+
+
+import React, { useState, useEffect ,useContext} from "react";
+import axios from "axios";
 function Shortlisted() {
-    let [jobData, setJobData] = useState([])
+    let [jobData, setJobData] = useState([]);
+    
     useEffect(() => {
         const fetchData = async () => {
-          let res = await axios.get("http://127.0.01:3001/jbdetails")
+          let res = await axios.get('./joblist');
           console.log("res", res.data)
           setJobData(res.data)
         }
-        fetchData()
+        fetchData();
       }, []) 
+      let filterData = jobData.filter((ele) => ele.status == "Shortlisted" )
+      console.log(filterData)
     return (
         <div className="test">
         <Head></Head>
@@ -70,18 +75,23 @@ function Shortlisted() {
                            </div>
                            <br></br>
 
-                           <h3>Jobs Shortlisted for your profile.</h3>
+                          
+
         <table>
-          <tr>
-          <td>JOB CODE</td><td>JOB TITLE</td> <td>LOCATION</td> <td>POSTED DATE</td> <td>APPLIED DATE</td> <td>STATUS</td></tr>{jobData.length ? (
-            jobData.map((ele) => (
+          <thead>
+          <th>JOB ID</th><th>JOB CODE</th><th>JOB TITLE</th> <th>LOCATION</th> <th>POSTED DATE</th> <th>APPLIED DATE</th> <th>STATUS</th> </thead>
+          <tbody>
+          {filterData.length ? 
+            filterData.map(ele => (
               <tr>
-                <td>{ele.id}</td> <td>{ele.bookname}</td> <td>{ele.bookauthor}</td><td>{ele.bookquantity}</td>
+                <td>{ele.id}</td> <td>{ele.jobcode}</td> <td>{ele.jobtitle}</td> <td>{ele.location}</td>
+                <td>{ele.posteddate}</td> <td>{ele.applieddate}</td> <td>{ele.status}</td>
               </tr>
-            ))
-          ) : (
-            <div> No data</div>
-          )}
+            )
+           ): 
+            <tr> No Job data</tr>
+          }
+          </tbody>
         </table>
                            {/* <div className="tab">
                            <table id="stable">
@@ -89,7 +99,7 @@ function Shortlisted() {
                             <tr>
                                 <th>JOB CODE</th>
                                 <th>JOB TITLE</th>
-                                <th>LOCATION</th>
+                                  <th>LOCATION</th>
                                 <th>POSTED DATE</th>
                                 <th>APPLIED DATE</th>
                                 <th>STATUS</th>
