@@ -6,6 +6,7 @@ import './login.css'
 function Loginpage()
 { 
     let [data,setData] = useState([]);
+    let navigate = useNavigate();
     function handleChange(e)
     {
         setData({
@@ -17,6 +18,9 @@ function Loginpage()
     const sendData=async ()=>{
         let res = await axios.post('/login',data)
         console.log(res.data)
+        if(res.data){
+            navigate('/dash')
+        }
     }
     return(
         <div className="login">

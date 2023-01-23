@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   post 'login', to:"login#create"
   get 'logout', to:"login#destroy"
 resources :joblist
+resources :profile, only: [:create,:show,:update,:destroy]
 end

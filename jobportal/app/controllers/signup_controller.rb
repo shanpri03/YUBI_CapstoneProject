@@ -7,7 +7,7 @@ skip_before_action :verify_authenticity_token
     end    
 
     def create
-    v = !params[:email] and !params[:password]
+    v = !params[:email].empty? and !params[:password].empty?
     puts params[:password]
     if v
         u = User.create('email': params[:email],'password': params[:password])
