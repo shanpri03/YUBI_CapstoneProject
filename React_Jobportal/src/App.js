@@ -13,6 +13,7 @@ import Shortlisted from './Components/Dashboard/Application/Shortlisted';
 import Rejected from './Components/Dashboard/Application/Rejected';
 import Interviewing from './Components/Dashboard/Application/Interviewing';
 import Offered from './Components/Dashboard/Application/Offered';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path='/login' element={<Loginpage />}></Route>
         <Route path='/signup' element={<Useraccount />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route path='/alljobs' element={<Alljobs/>}></Route>
         {/* <Subheader></Subheader> */}
       </Routes>
 

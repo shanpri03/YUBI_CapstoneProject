@@ -4,8 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import './profile.css'
 function Profile() {
   let location = useLocation();
-  let [data, setData] = useState([]);
-  let [email, setEmail] = useState({});
+  let [data, setData] = useState({});
+  let [email, setEmail] = useState('');
   let navigate = useNavigate();
   const handleChange = (e) => {
     setData({
@@ -14,11 +14,11 @@ function Profile() {
     })
   }
   const sendData = async () => {
-    setEmail({ [email]: location.state.email })
+    setEmail(location.state.email )
     console.log(email)
     setData({
       ...data,
-      email
+      email: email
     })
     console.log(data)
     let response = await axios.post('/profile', data);
