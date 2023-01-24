@@ -10,9 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_23_153039) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_24_195834) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "jobcontents", force: :cascade do |t|
+    t.string "jobTitle"
+    t.string "jobDescription"
+    t.string "companyName"
+    t.string "location"
+    t.string "jobType"
+    t.integer "salary"
+    t.date "postedDate"
+    t.string "domain"
+    t.string "jobCode"
+    t.string "skillsRequired"
+    t.string "applicationStatus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobdata", force: :cascade do |t|
+    t.integer "job_id"
+    t.string "jobTitle"
+    t.string "jobDescription"
+    t.string "companyName"
+    t.string "location"
+    t.string "jobType"
+    t.integer "salary"
+    t.date "postedDate"
+    t.string "domain"
+    t.string "jobCode"
+    t.string "skillsRequired"
+    t.string "applicationStatus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jobdetails", force: :cascade do |t|
+    t.string "jobcode"
+    t.string "jobtitle"
+    t.string "location"
+    t.date "posteddate"
+    t.date "applieddate"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jobs", force: :cascade do |t|
     t.string "jobcode"

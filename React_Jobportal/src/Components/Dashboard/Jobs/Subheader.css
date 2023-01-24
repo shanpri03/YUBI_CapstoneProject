@@ -185,7 +185,7 @@ border-radius: 0px;
 }
 
 .head3 > button{
-height: 30%;
+height: 50%;
 width: 10%;
 left: 0px;
 top: 0px;
@@ -196,7 +196,7 @@ background: #006FCB;
 
 .head4{
 width: 60%;
-height:10%;
+height:60%;
 padding-left: 10px;
 left: 94px;
 top: 727px;
@@ -211,7 +211,7 @@ font-size: smaller;
   position: relative;
   display: inline-block;
   width: 10%;
-  height: 20%;
+  height: 40%;
   margin-right: 20px;
 }
 
@@ -309,7 +309,7 @@ font-size: smaller;
   position: relative;
   display: inline-block;
   width: 10%;
-  height: 20%;
+  height: 10%;
   margin-right: 20px;
 }
 
@@ -426,13 +426,14 @@ font-size: smaller;
   width:80%;
   height:50%;
 }
+
 .head5dc {
   display: flex;
   Width: 130px;
   Height: 25px;
   Top: 3px;
   Left: 29px;
-  background-color: aliceblue;
+  background-color: lightcoral;
   text-align: start;
 }
 
@@ -464,8 +465,9 @@ font-size: smaller;
 
 .head5tb {
   Width: 1319px;
-  Height: 84px;
+  Height: 44px;
   Top: 98px;
+  
 }
 
 .head6 {
@@ -561,4 +563,200 @@ font-size: smaller;
   Width: 1319px;
   Height: 84px;
   Top: 98px;
+}
+
+
+
+
+
+.head5
+{
+  height: 128px;
+  width: 24px;
+  border-radius: 10px;
+ 
+  
+}
+.head5t
+{
+  Width : 229px;
+  Height :36px;
+  
+}
+.head5ta
+{
+display: flex;
+Width : 794px;
+Height : 54px;
+Top : 55px;
+Gap : 58px;
+background-color: royalblue;
+align-items: center;
+}
+.head5da{
+  display: flex;
+  Width : 200px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: center;
+}
+
+.head5da>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+}
+ .head5db{
+  display: flex;
+  Width : 150px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: start;
+}
+.head5db>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+
+}
+.head5dc{
+  display: flex;
+  Width : 130px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: start;
+}
+.head5dc>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+
+}
+.head5dd{
+  display: flex;
+  Width : 129px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: start;
+}
+.head5dd>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+
+}
+.head5tb
+{
+  Width : 1319px;
+Height : 99px;
+Top :98px;
+
+}
+.head6
+{
+  height: 34px;
+  width: 224px;
+  border-radius: 10px; 
+ 
+  
+}
+.head6ta1
+{
+display: flex;
+Width : 794px;
+Height :  54px;
+Top : 55px;
+Gap : 58px;
+background-color: royalblue;
+align-items: center;
+}
+.head6da1{
+  display: flex;
+  Width : 200px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: center;
+}
+
+.head6da1>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+}
+ .head6db1{
+  display: flex;
+  Width : 150px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: start;
+}
+.head6db1>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+
+}
+.head6dc1{
+  display: flex;
+  Width : 130px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: start;
+}
+.head6dc1>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+
+}
+.head6dd1{
+  display: flex;
+  Width : 129px;
+  Height : 25px;
+  Top : 3px;
+  Left : 29px;
+  background-color: aliceblue;
+  text-align: start;
+}
+.head6dd1>img
+{
+  Width:25px;
+Height :25px;
+Top :6.5px;
+Left:9.5px;
+
+}
+.head6tb1
+{
+  Width : 1319px;
+Height : 84px;
+Top :98px;
 }

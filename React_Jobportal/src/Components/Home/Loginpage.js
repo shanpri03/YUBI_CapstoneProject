@@ -19,7 +19,7 @@ function Loginpage()
         let res = await axios.post('/login',data)
         console.log(res.data)
         if(res.data){
-            navigate('/dash')
+            navigate('/dashboard')
         }
     }
     return(

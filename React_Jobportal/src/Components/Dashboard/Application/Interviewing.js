@@ -27,52 +27,7 @@ function Interviewing() {
                         <br></br>
                        
                       
-                          <div className="head4">
-                          <div class="Job">
-                          <span>All Jobs</span>
-                          <div class="Jobdropdown-content">
-                          <p>Job1</p>
-                          <p>Job2</p>
-                          <p>Job3</p>
-                          </div>
-                          </div>
-                          <div class="Ind">
-                          <span>Industry</span>
-                          <div class="Inddropdown-content">
-                          <p>Industry1</p>
-                          <p>Industry2</p>
-                          <p>Industry3</p>
-                          </div>
-                          </div>
-                          <div class="Loc">
-                          <span>Location</span>
-                          <div class="Locdropdown-content">
-                          <p>Location1</p>
-                          <p>Location2</p>
-                          <p>Location3</p>
-                          </div>
-                          </div>
-                          <div class="Type">
-                          <span>Job Type</span>
-                          <div class="Typedropdown-content">
-                          <p>Type1</p>
-                          <p>Type2</p>
-                          <p>Type3</p>
-                          </div>
-                          </div>
-          
-                          <div class="Date">
-                          <span>Posted Date</span>
-                          <div class="Datedropdown-content">
-                          <p>11-01-2001</p>
-                          <p>21-11-2003</p>
-                          <p>11-1-2003</p>
-                          </div>
-                          </div>
                          
-                           </div>
-                           <br></br>
-
                            
 
         <table>

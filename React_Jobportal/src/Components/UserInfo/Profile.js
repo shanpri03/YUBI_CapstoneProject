@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import './profile.css'
 function Profile() {
   let location = useLocation();
@@ -82,7 +82,13 @@ function Profile() {
               <input type="submit" className="prof-sub" onClick={sendData}></input>
             </div>
           </div>
+         
         </div>
+        <div>
+            <Link to="/dashboard" style={{ color: "black" }} >
+             <h4> Go to Dashboard </h4>
+            </Link>
+          </div>
         <div className="prof-footer">
         <p>&copy; 2021 All rights reserved</p>
         <div className="social">

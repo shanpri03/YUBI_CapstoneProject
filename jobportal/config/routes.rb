@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get 'logout', to:"login#destroy"
 resources :joblist
 resources :profile, only: [:create,:show,:update,:destroy]
+resources :jobdetail
 end

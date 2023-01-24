@@ -1,6 +1,20 @@
 import React from "react"
+import Head from "../Header/Head";
+import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import axios from "axios";
+import { Button } from "bootstrap";
 import "./Subheader.css"
+
 export default function Subheader() {
+   let [data, setdata] =   useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      let res = await axios.get('./jobdetail');
+      setdata(res.data);
+    }
+    fetchData();
+  }, [])
    return (
       <div className="subheader">
          <div className="section-1">
@@ -12,21 +26,27 @@ export default function Subheader() {
             <div className="sec1-a">
                <img src="Images\AllJobs.png" alt="All jobs Logo" />
                <div className="sec1-a-col">
-                  <h5>All Jobs</h5>
-                  <p>100</p>
+               <Link to="/alljobs" style={{color:"black"}} >
+                     All Jobs
+               </Link>
+               <p>100</p>
                </div>
             </div>
             <div className="sec1-b">
                <img src="Images\AllJobs.png" alt="All jobs Logo" />
                <div className="sec1-b-col">
-                  <h5>Eligible Jobs</h5>
+               <Link to="/elligiblejobs" style={{color:"black"}} >
+                     Elligible Jobs
+               </Link>
                   <p>80</p>
                </div>
             </div>
             <div className="sec1-c">
                <img src="Images\AllJobs.png" alt="Alljobs Logo" />
                <div className="sec1-c-col">
-                  <h5>Applied Jobs</h5>
+               <Link to="/appliedjobs" style={{color:"black"}} >
+                     Applied Jobs
+                </Link> 
                   <p>50</p>
                </div>
             </div>
@@ -40,28 +60,36 @@ export default function Subheader() {
             <div className="sec1-a">
                <img src="Images\AllJobs.png" alt="All jobs Logo" />
                <div className="sec1acol">
-                  <h5>Shortlisted</h5>
+               <Link to="/shortlisted" style={{color:"black"}} >
+                     Shortlisted
+                </Link>
                   <p>100</p>
                </div>
             </div>
             <div className="sec1-b">
                <img src="Images\AllJobs.png" alt="All jobs Logo" />
                <div className="sec1-b-col">
-                  <h5>Interviewing</h5>
+               <Link to="/rejected" style={{color:"black"}} >
+                     Rejected
+              </Link> 
                   <p>80</p>
                </div>
             </div>
             <div className="sec1-c">
                <img src="Images\AllJobs.png" alt="All jobs Logo" />
                <div className="sec1-c-col">
-                  <h5>Rejected</h5>
+               <Link to="/interviewing" style={{color:"black"}} >
+                     Interviewing
+              </Link>
                   <p>50</p>
                </div>
             </div>
             <div className="sec1-d">
                <img src="Images\AllJobs.png" alt="All jobs Logo" />
                <div className="sec1-d-col">
-                  <h5>Offer Received</h5>
+               <Link to="/offered" style={{color:"black"}} >
+                     Offer Received
+               </Link>
                   <p>5</p>
                </div>
             </div>
@@ -86,12 +114,7 @@ export default function Subheader() {
                   <option value="mercedes">Mercedes</option>
                   <option value="audi">Audi</option>
                </select>
-               {/* <button>All Jobs</button>
-               <div>
-                  <p>Job1</p>
-                  <p>Job2</p>
-                  <p>Job3</p>
-               </div> */}
+               
             </div>
             <div class="Ind">
             <select  class="Inddropdown-content">
@@ -133,64 +156,61 @@ export default function Subheader() {
          <div className="head5">
 
             <div className="job-details">
-            <div className="job-desc">
-               <h3> JPC 1692 Developer Jobs</h3>
-               <button className="apply-btn">apply</button>
-               </div>
-               <div className="job-head">
-                  <div className="job-head-1">
-                     <img src="Images\Location.png" alt="All jobs Logo" />
-                     <p>Mumbai, Maharashtra</p>      
-                     </div>
-                  <div className="job-head-2">
-                     <img src="Images\FullTime.png" alt="Full time Logo" />
-                     <p>Full Time Job</p>
-                  </div>
-                  <div className="job-head-3">
-                     <img src="Images\Salary.png" alt="Salary Logo" />
-                    <p> 100-110$</p>
-                  </div>
-                  <div className="job-head-4">
-                     <img src="Images\Building.png" alt="Building Logo" />
-                     <p>CEIPAL</p>
-                  </div>
-               </div>
-               <div className="job-content">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat nulla ligula, vitae sodales quam dignissim venenatis. Phasellus et aliquet neque. Praesent sed rutrum urna. Etiam luctus egestas arcu a lobortis. Cras consectetur accumsan magna, vel mollis tellus dapibus et. Phasellus sit amet nisl sed libero ornare molestie. Duis sollicitudin porta orci non varius. Aenean elit ipsum, ullamcorper a ullamcorper mattis, commodo sed ipsum. Proin elementum dui nibh, nec hendrerit liber
-                  </p>
-               </div>
-
+                
+            {data.map((ele) =>
+       <div className="head5">
+          <div className="head5t">
+          
+            <h3>
+              
+              <div>
+              
+                {ele.jobCode} -  {ele.jobTitle}
+              </div>
+            </h3>
+            <div className="head5ta">
+              <div className="head5da">
+                <img src="Images\Location.png" alt="All jobs Logo" />
+                <div>
+                  {ele.location}
+                </div>
+              </div>
+              <div className="head5db">
+                <img src="Images\Salary.png" alt="Full time Logo" />
+                <div>
+                  {ele.jobType}
+                </div>
+              </div>
+              <div className="head5dc">
+                <img src="Images\Salary.png" alt="Salary Logo" />
+                <div>
+                  {ele.salary}
+                </div>
+              </div>
+              <div className="head5dd">
+                <img src="Images\Building.png" alt="Building Logo" />
+                <div>
+                  {ele.companyName}
+                </div>
+              </div>
             </div>
-            <div className="job-details">
-               <div className="job-desc">
-               <h3> JPC 1692 Developer Jobs</h3>
-               <button className="apply-btn">apply</button>
-               </div>
-               <div className="job-head">
-                  <div className="job-head-1">
-                     <img src="Images\Location.png" alt="All jobs Logo" />
-                     <p>Mumbai, Maharashtra</p>      
-                     </div>
-                  <div className="job-head-2">
-                     <img src="Images\FullTime.png" alt="Full time Logo" />
-                     <p>Full Time Job</p>
-                  </div>
-                  <div className="job-head-3">
-                     <img src="Images\Salary.png" alt="Salary Logo" />
-                    <p> 100-110$</p>
-                  </div>
-                  <div className="job-head-4">
-                     <img src="Images\Building.png" alt="Building Logo" />
-                     <p>CEIPAL</p>
-                  </div>
-               </div>
-               <div className="job-content">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat nulla ligula, vitae sodales quam dignissim venenatis. Phasellus et aliquet neque. Praesent sed rutrum urna. Etiam luctus egestas arcu a lobortis. Cras consectetur accumsan magna, vel mollis tellus dapibus et. Phasellus sit amet nisl sed libero ornare molestie. Duis sollicitudin porta orci non varius. Aenean elit ipsum, ullamcorper a ullamcorper mattis, commodo sed ipsum. Proin elementum dui nibh, nec hendrerit liber
-                  </p>
-               </div>
-
+            <div className="head5tb">
+              <div>
+               
+               <p>{ele.jobDescription}</p> 
+               <p><br></br></p>
+            
+              </div>
             </div>
+          
+          </div>
+        </div>
+         )}
+
+         
+            
          </div>
+      </div>
       </div>
 
    );
