@@ -210,16 +210,8 @@ export default function Subheader() {
 
              </div>
          </div>
-      </div>
-             
-           
-        
-
-         
-            
-         </div>
-      
-    
+      </div>      
+         </div>      
 
    );
 }
