@@ -1,18 +1,25 @@
 class ProfileController < ApplicationController
     skip_before_action :verify_authenticity_token
-    def create
-        v = !params[:email].empty? and !params[:name].empty? and !params[:phno].empty? and !params[:currentcomp].empty? and !params[:currentrole].empty? and !params[:about].empty? and !params[:profcv].empty? and !params[:profpic].empty? and !params[:profpic].empty?
-        puts params[:skills]
-        u = User.find_by("email": params[:email])
-        if !u.nil?
-        if v
-            p = Profile.create('email': u.email,'name': params[:name],'phno': params[:phno],'currentcomp': params[:currentcomp],'currentrole': params[:currentrole],'about': params[:about],'profcv': params[:profcv],'profpic': params[:profpic],'skills': params[:skills],'userid': u.id)
-        render json: "true"
-        else
-            render json: "false"
-        end
+ def create
+    v =  !params[:first_name].empty? and !params[:last_name].empty? and !params[:email].empty? and !params[:contact].empty? and !params[:address].empty? and !params[:about].empty? and !params[:prof_pic].empty? and !params[:current_comp].empty? and !params[:ctc].empty? and !params[:experience].empty? 
+    !params[:current_role].empty? and !params[:skills].empty? and !params[:exp_salary].empty? and !params[:pref_loc].empty? 
+ if v
+    u = User.find_by("email": params[:email])
+    if !u.nil?
+    p = Profile.create('first_name': params[:first_name],'last_name': params[:last_name],'email': params[:email],'contact': params[:contact],'address': params[:address],'about': params[:about],'prof_pic ': params[:prof_pic ],'current_comp': params[:current_comp],'ctc': params[:ctc],'experience': params[:experience],'current_role': params[:current_role],'skills': params[:skills],'exp_salary': params[:exp_salary],'exp_salary': params[:exp_salary],'pref_loc': params[:pref_loc],'userid': u.id)
+    # p.upload = params[:profcv]
+    # p.save!
+    # p.upload.url # => '/url/to/file.png'
+    # p.upload.current_path # => 'path/to/file.png'
+    # p.upload_identifier # => 'file.png
+    render json:"true"
     else
-        render json: "false"
-    end
- end    
+        render json:"false"
+    end    
+ else
+    render json:"false"
+ end
+ end
+
+
 end

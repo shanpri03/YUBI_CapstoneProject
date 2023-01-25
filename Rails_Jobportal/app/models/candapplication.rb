@@ -1,2 +1,0 @@
-class Candapplication < ApplicationRecord
-end

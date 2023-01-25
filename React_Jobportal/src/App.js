@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Launchpage from "./Components/Launchpage.js";
-import Loginpage from './Components/Loginpage';
-import Useraccount from './Components/Useraccount';
-import Profile from './Components/Profile'
+import Launchpage from "./Components/Home/Launchpage.js";
+import Loginpage from './Components/Home/Loginpage';
+import Useraccount from './Components/UserInfo/Useraccount';
+import Profile from './Components/UserInfo/Profile'
 import Head from './Components/Dashboard/Header/Head';
 import Subheader from './Components/Dashboard/Subheader/Subheader';
 import Appliedjobs from './Components/Dashboard/Jobs/Appliedjobs';
@@ -26,7 +26,12 @@ function App() {
         <Route path='/profile' element={<Profile />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/alljobs' element={<Alljobs/>}></Route>
-        {/* <Subheader></Subheader> */}
+        <Route path='/appliedjobs' element={<Appliedjobs />}></Route>
+        <Route path='/elligiblejobs' element={<Eligiblejobs />}></Route>
+        <Route path='/shortlisted' element={<Shortlisted />}></Route>
+        <Route path='/rejected' element={<Rejected />}></Route>
+        <Route path='/interviewing' element={<Interviewing />}></Route>
+        <Route path='/offered' element={<Offered />}></Route>
       </Routes>
 
     </>

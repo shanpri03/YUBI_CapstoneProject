@@ -1,0 +1,97 @@
+.account{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    padding: 0;
+    margin: 0;
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.BbUWqBUe4b_C0cNdcvcWewHaEK&pid=Api&P=0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    color: aliceblue;
+     
+}
+
+.header{
+    height: 10%;
+    width: 100%;
+}
+.header >.acc-sec1 >img{
+    width: 150px;
+
+}
+
+.acc-content{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+ 
+.acc-section1 >.features >img{
+    width: 30%;
+    height:70%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.acc-section1 >.features{
+    width:80%;
+    height: 70%;
+    border: 1px dotted black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.acc-section1 >.features >ul{
+    font-size: large;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.acc-section1 >.features >ul >li{
+    margin: 10px;
+}
+
+.acc-section2 > {
+    width:50%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.acc-login-input{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.acc-section2 >.acc-login-input >input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    width : 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.acc-section2 >.acc-login-input >input[type='submit']{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

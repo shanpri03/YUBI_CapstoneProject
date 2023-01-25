@@ -1,118 +1,133 @@
 import React from "react"
 import Head from "../Header/Head";
-function Alljobs()
-{
-    return(
-     
-<div className="test">
-<Head></Head>
-    <div>
-<h4>Jobs in Domain</h4>
-                    <input type="text" placeholder = "Title,Client,Location"></input>
-                    <button name =  "Search" >Search</button>
-                </div>
-                <br></br>
-                <div className="head4">
-                <div class="Job">
-                <span>All Jobs</span>
-                <div class="Jobdropdown-content">
-                <p>Job1</p>
-                <p>Job2</p>
-                <p>Job3</p>
-                </div>
-                </div>
-                <div class="Ind">
-                <span>Industry</span>
-                <div class="Inddropdown-content">
-                <p>Industry1</p>
-                <p>Industry2</p>
-                <p>Industry3</p>
-                </div>
-                </div>
-                <div class="Loc">
-                <span>Location</span>
-                <div class="Locdropdown-content">
-                <p>Location1</p>
-                <p>Location2</p>
-                <p>Location3</p>
-                </div>
-                </div>
-                <div class="Type">
-                <span>Job Type</span>
-                <div class="Typedropdown-content">
-                <p>Type1</p>
-                <p>Type2</p>
-                <p>Type3</p>
-                </div>
-                </div>
+import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import axios from "axios";
+import { Button } from "bootstrap";
+import "../Subheader/Subheader.css"
+function Alljobs() {
+  let [data, setdata] =   useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      let res = await axios.get('./jobdetail');
+      setdata(res.data);
+    }
+    fetchData();
+  }, [])
+  return (
+    <div className="test">
+      <Head></Head>
+      <div>
+        <h4>Jobs in Domain</h4>
+        <input type="text" placeholder="Title,Client,Location"></input>
+        <button name="Search" >Search</button>
+      </div>
+      <br></br>
+      <div className="head4">
+            <div class="Job">
+               <select  class="Jobdropdown-content">
+                  <option value="Alljobs">Alljobs</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>
+               
+            </div>
+            <div class="Ind">
+            <select  class="Inddropdown-content">
+                  <option value="Alljobs">Industry</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>          
+            </div>
+            <div class="Loc">
+            <select  class="Locdropdown-content">
+                  <option value="Alljobs">Location</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+          
+            </div>
+            <div class="Type">
+            <select  class="Typedropdown-content">
+                  <option value="Alljobs">Type</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+              </div>
 
-                <div class="Date">
-                <span>Posted Date</span>
-                <div class="Datedropdown-content">
-                <p>11-01-2001</p>
-                <p>21-11-2003</p>
-                <p>11-1-2003</p>
+            <div class="Date">
+            <select  class="Datedropdown-content">
+                  <option value="Alljobs">Date</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+      
+            </div>
+
+         </div>
+      
+      {data.map((ele) =>
+       <div className="head5">
+          <div className="head5t">
+            <h3>
+              <div>
+                <br></br>
+                {ele.jobCode} -  {ele.jobTitle}
+              </div>
+            </h3>
+            <div className="head5ta">
+              <div className="head5da">
+                <img src="Images\Location.png" alt="All jobs Logo" />
+                <div>
+                  {ele.location}
                 </div>
+              </div>
+              <div className="head5db">
+                <img src="Images\Salary.png" alt="Full time Logo" />
+                <div>
+                  {ele.jobType}
                 </div>
-                 
+              </div>
+              <div className="head5dc">
+                <img src="Images\Salary.png" alt="Salary Logo" />
+                <div>
+                  {ele.salary}
                 </div>
-                <div className="head5">
-                  
-                 <div className="head5t">
-                    <h3> JPC 1692 Developer Jobs</h3>
-                    <div className="head5ta">
-                   <div className="head5da">
-                     <img src="Images\Location.png" alt="All jobs Logo"/>
-                    Mumbai, Maharashtra
-                     </div>
-                     <div className="head5db">
-                     <img src="Images\Full Time.png" alt="Full time Logo"/>
-                     Full Time Job
-                     </div>
-                     <div className="head5dc">
-                     <img src="Images\Salary.png" alt="Salary Logo"/>
-                     100-110$
-                     </div>
-                     <div className="head5dd">
-                     <img src="Images\Building.png" alt="Building Logo"/>
-                     CEIPAL
-                     </div>
-                     </div>
-                     <div className="head5tb">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat nulla ligula, vitae sodales quam dignissim venenatis. Phasellus et aliquet neque. Praesent sed rutrum urna. Etiam luctus egestas arcu a lobortis. Cras consectetur accumsan magna, vel mollis tellus dapibus et. Phasellus sit amet nisl sed libero ornare molestie. Duis sollicitudin porta orci non varius. Aenean elit ipsum, ullamcorper a ullamcorper mattis, commodo sed ipsum. Proin elementum dui nibh, nec hendrerit liber
- </p>
-                     </div>        
-                      <div className="head6">
-                      <div className="head6t1">
-                    <h3> JPC 1692 Developer Jobs</h3>
-                    <div className="head6ta1">
-                   <div className="head6da1">
-                     <img src="Images\Location.png" alt="All jobs Logo"/>
-                    Mumbai, Maharashtra
-                     </div>
-                     <div className="head6db1">
-                     <img src="Images\Full Time.png" alt="Full time Logo"/>
-                     Full Time Job
-                     </div>
-                     <div className="head6dc1">
-                     <img src="Images\Salary.png" alt="Salary Logo"/>
-                     100-110$
-                     </div>
-                     <div className="head6dd1">
-                     <img src="Images\Building.png" alt="Building Logo"/>
-                     CEIPAL
-                     </div>
-                     </div>
-                     <div className="head6tb1">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat nulla ligula, vitae sodales quam dignissim venenatis. Phasellus et aliquet neque. Praesent sed rutrum urna. Etiam luctus egestas arcu a lobortis. Cras consectetur accumsan magna, vel mollis tellus dapibus et. Phasellus sit amet nisl sed libero ornare molestie. Duis sollicitudin porta orci non varius. Aenean elit ipsum, ullamcorper a ullamcorper mattis, commodo sed ipsum. Proin elementum dui nibh, nec hendrerit liber
- </p>
- 
- </div>
-                     </div> 
+              </div>
+              <div className="head5dd">
+                <img src="Images\Building.png" alt="Building Logo" />
+                <div>
+                  {ele.companyName}
                 </div>
-                </div>
-              </div> 
+              </div>
+            </div>
+            <div className="head5tb">
+              <div>
+               
+                {ele.jobDescription}
+            
+              </div>
+            </div>
+          
+          </div>
+        </div>
+         )}
+
+          <div>
+          <br></br>
+          <br></br>
+            <Link to="/dashboard" style={{ color: "black" }} >
+             <h4> Go to Dashboard </h4>
+            </Link>
+          </div>
 </div>
-    );
+
+
+  );
 }
 export default Alljobs;

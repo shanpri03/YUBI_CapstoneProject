@@ -1,0 +1,56 @@
+database name:	jobdb
+
+tables:
+
+1. userAccount
+		- id
+		- email
+		- password (in hash format)
+		- creationDate
+		- userType
+2. skillTable
+		- id
+		- skillName
+3. jobDetails
+		- id
+		- jobTitle
+		- jobDescription
+		- companyName
+		- location
+		- jobType
+		- salary
+		- postedDate
+		- domain
+		- jobCode
+		- skillsRequired
+		- applicationStatus
+				eg: open/closed
+4. candidateProfile
+		- id
+		- firstName
+		- lastName
+		- email
+		- contact
+		- address
+		- about
+		- profilePic
+		- currentCompany
+		- ctc
+		- experience
+			eg. in years
+		- currentRole
+		- skills
+		- resumeLink
+		- expectedSalary
+		- preferredLocation
+
+5. candidateApplication
+		- id
+		- userId
+			from candidateProfile
+		- jobCode
+		- appliedDate
+		- candidateApplicationStatus
+		- location
+			(fetch from jobDetails)
+		
