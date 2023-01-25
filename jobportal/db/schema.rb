@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_24_195834) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_25_063142) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "candapplications", force: :cascade do |t|
+    t.integer "userid"
+    t.integer "jobcode"
+    t.date "applied_date"
+    t.string "status"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jobcontents", force: :cascade do |t|
     t.string "jobTitle"
@@ -30,34 +40,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_195834) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobdata", force: :cascade do |t|
-    t.integer "job_id"
-    t.string "jobTitle"
-    t.string "jobDescription"
-    t.string "companyName"
-    t.string "location"
-    t.string "jobType"
-    t.integer "salary"
-    t.date "postedDate"
-    t.string "domain"
-    t.string "jobCode"
-    t.string "skillsRequired"
-    t.string "applicationStatus"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "jobdetails", force: :cascade do |t|
-    t.string "jobcode"
-    t.string "jobtitle"
-    t.string "location"
-    t.date "posteddate"
-    t.date "applieddate"
-    t.string "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "jobs", force: :cascade do |t|
     t.string "jobcode"
     t.string "jobtitle"
@@ -70,16 +52,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_195834) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phno"
-    t.string "currentcomp"
-    t.string "currentrole"
-    t.string "about"
-    t.string "profcv"
-    t.string "profpic"
-    t.string "skills"
-    t.integer "userid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "skill_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -87,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_195834) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
+    t.string "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
