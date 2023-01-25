@@ -1,0 +1,2 @@
+class CandapplicationController < ApplicationController
+end
