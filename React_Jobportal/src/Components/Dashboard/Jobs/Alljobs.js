@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Button } from "bootstrap";
-import "./Subheader.css"
+import "../Subheader/Subheader.css"
 function Alljobs() {
   let [data, setdata] =   useState([]);
   useEffect(() => {

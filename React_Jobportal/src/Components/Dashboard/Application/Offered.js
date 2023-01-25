@@ -27,7 +27,53 @@ function Offered() {
                         <br></br>
                        
                       
-                         
+                        <div className="head4">
+            <div class="Job">
+               <select  class="Jobdropdown-content">
+                  <option value="Alljobs">Alljobs</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>
+               
+            </div>
+            <div class="Ind">
+            <select  class="Inddropdown-content">
+                  <option value="Alljobs">Industry</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>          
+            </div>
+            <div class="Loc">
+            <select  class="Locdropdown-content">
+                  <option value="Alljobs">Location</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+          
+            </div>
+            <div class="Type">
+            <select  class="Typedropdown-content">
+                  <option value="Alljobs">Type</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+              </div>
+
+            <div class="Date">
+            <select  class="Datedropdown-content">
+                  <option value="Alljobs">Date</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+      
+            </div>
+
+         </div>
 
                         
 

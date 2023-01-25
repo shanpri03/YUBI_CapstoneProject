@@ -191,12 +191,12 @@ left: 0px;
 top: 0px;
 border-radius: 3px;
 margin-left: 30px;
-background: #006FCB;
+background:blue;
 }
 
 .head4{
 width: 60%;
-height:10%;
+height:22%;
 padding-left: 10px;
 left: 94px;
 top: 727px;
@@ -222,7 +222,7 @@ font-size: smaller;
   top: 0px;
   border-radius: 4px;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: gray;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -236,7 +236,7 @@ font-size: smaller;
   position: relative;
   display: inline-block;
   width: 10%;
-  height: 30%;
+  height: 20%;
   margin-right: 20px;
 }
 
@@ -247,7 +247,7 @@ font-size: smaller;
   top: 0px;
   border-radius: 4px;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: gray;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -260,7 +260,7 @@ font-size: smaller;
   position: relative;
   display: inline-block;
   width: 10%;
-  height: 30%;
+  height: 20%;
   margin-right: 20px;
 }
 
@@ -271,7 +271,7 @@ font-size: smaller;
   top: 0px;
   border-radius: 4px;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: gray;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
@@ -285,7 +285,7 @@ font-size: smaller;
   position: relative;
   display: inline-block;
   width: 10%;
-  height: 30%;
+  height: 20%;
   margin-right: 20px;
 }
 
@@ -296,7 +296,7 @@ font-size: smaller;
   top: 0px;
   border-radius: 4px;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: gray;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -320,7 +320,7 @@ font-size: smaller;
   top: 0px;
   border-radius: 4px;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: grey;
   min-width: 60px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;

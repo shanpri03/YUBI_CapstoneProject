@@ -28,7 +28,53 @@ function Shortlisted() {
                         </div>
                         <br></br>
                        
-                      
+                        <div className="head4">
+            <div class="Job">
+               <select  class="Jobdropdown-content">
+                  <option value="Alljobs">Alljobs</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>
+               
+            </div>
+            <div class="Ind">
+            <select  class="Inddropdown-content">
+                  <option value="Alljobs">Industry</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select>          
+            </div>
+            <div class="Loc">
+            <select  class="Locdropdown-content">
+                  <option value="Alljobs">Location</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+          
+            </div>
+            <div class="Type">
+            <select  class="Typedropdown-content">
+                  <option value="Alljobs">Type</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+              </div>
+
+            <div class="Date">
+            <select  class="Datedropdown-content">
+                  <option value="Alljobs">Date</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+               </select> 
+      
+            </div>
+
+         </div>
                         
           
                      
@@ -51,102 +97,7 @@ function Shortlisted() {
           }
           </tbody>
         </table>
-                           {/* <div className="tab">
-                           <table id="stable">
-                            <thead>
-                            <tr>
-                                <th>JOB CODE</th>
-                                <th>JOB TITLE</th>
-                                  <th>LOCATION</th>
-                                <th>POSTED DATE</th>
-                                <th>APPLIED DATE</th>
-                                <th>STATUS</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            <tr>
-                                <td>JPC-2</td>
-                                <td>Product Manager</td>
-                                <td>Bangalore</td>
-                                <td>08 Jan 2022</td> 
-                                <td>00 Jan 2022</td> 
-                                <td>Shortlisted</td> 
-                            </tr>
-                            </tbody>
-                          </table> 
-    </div>*/}
+                          
 
 
 

@@ -154,64 +154,72 @@ export default function Subheader() {
 
          </div>
          <div className="head5">
-
             <div className="job-details">
-                
-            {data.map((ele) =>
-       <div className="head5">
-          <div className="head5t">
-          
-            <h3>
-              
-              <div>
-              
+            <div className="job-desc">
+            { data.map((ele) => 
+             <div>        
+            <h3>             
                 {ele.jobCode} -  {ele.jobTitle}
-              </div>
             </h3>
-            <div className="head5ta">
-              <div className="head5da">
-                <img src="Images\Location.png" alt="All jobs Logo" />
-                <div>
+            <button className="apply-btn">apply</button>
+             </div>
+             )}
+                <div className="job-head">
+                <div className="job-head-1"> 
+                  <img src="Images\Location.png" alt="All jobs Logo" />
+                  { data.map((ele) => 
+                  <div>
                   {ele.location}
-                </div>
-              </div>
-              <div className="head5db">
-                <img src="Images\Salary.png" alt="Full time Logo" />
-                <div>
+                   </div>
+                  )}
+               </div>
+               <div className="job-head-2">
+                     <img src="Images\FullTime.png" alt="Full time Logo" />
+                     { data.map((ele) => 
+                  <div>
                   {ele.jobType}
-                </div>
-              </div>
-              <div className="head5dc">
-                <img src="Images\Salary.png" alt="Salary Logo" />
-                <div>
+                   </div>
+                  )}
+                  </div>
+                  <div className="job-head-3">
+                     <img src="Images\Salary.png" alt="Salary Logo" />
+                     { data.map((ele) => 
+                  <div>
                   {ele.salary}
-                </div>
-              </div>
-              <div className="head5dd">
-                <img src="Images\Building.png" alt="Building Logo" />
-                <div>
+                   </div>
+                  )}
+                  </div>
+                  <div className="job-head-4">
+                     <img src="Images\Building.png" alt="Building Logo" />
+                     { data.map((ele) => 
+                  <div>
                   {ele.companyName}
-                </div>
-              </div>
-            </div>
-            <div className="head5tb">
-              <div>
+                   </div>
+                  )}
+                  </div>
+               </div>
+               <div className="job-content">
+               { data.map((ele) => 
+                  <div>
+                  {ele.jobDescription}
+                   </div>
+                  )}
+               </div>
                
-               <p>{ele.jobDescription}</p> 
-               <p><br></br></p>
-            
-              </div>
-            </div>
-          
-          </div>
-        </div>
-         )}
+             
+
+             </div>
+         </div>
+      </div>
+             
+           
+        
 
          
             
          </div>
-      </div>
-      </div>
+      
+    
 
    );
 }
