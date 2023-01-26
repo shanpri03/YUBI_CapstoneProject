@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Head.css";
+
 function Head()
 {
   let navigate =useNavigate();
@@ -19,7 +20,7 @@ const fetchlogout =async ()=>{
            <img src="Images\HVLogo.png" alt="HV Logo"/>
           </div>
           <div className="sec2">
-          <Link  to='/dashboard'><div> Dashboard</div></Link>
+          <Link  to='/dashboard'><div>Dashboard</div></Link>
           <Link to='/profile'> <div> Application Profile</div></Link> 
           <Link to='/alljobs'><div> Applied Jobs</div> </Link>
           <div> Activity</div> 

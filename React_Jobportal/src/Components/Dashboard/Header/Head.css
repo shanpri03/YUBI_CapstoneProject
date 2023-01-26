@@ -1,11 +1,10 @@
+
 .header
 {
     height: 10%;
     width: 100%;
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-    background-color: #006FCB; 
+    background-color: #006FCB;
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,6 +14,11 @@
     height: 70%;
     width: 20%;
     padding: 0%;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+  text-align:right;
+    justify-content: space-around;
 }
 .sec2>div
 {
@@ -32,8 +36,8 @@ align-items: flex-start;
     position: relative;
     height: 70%;
      width: 60%;
-    color: white;
-    
+    color: black;
+    font-weight: bold;
     align-items: center;
     align-content: flex-start;
   text-align:left;
@@ -50,8 +54,8 @@ align-items: flex-start;
 .sec1>img
 {
     
-    height: 40px;
-    width:150px;
+    height: 121%;
+    width:97%;
     top: 5px;
    
   padding: 2px 5px;
