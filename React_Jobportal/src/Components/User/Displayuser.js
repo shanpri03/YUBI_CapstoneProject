@@ -1,10 +1,15 @@
 import Head from "../Dashboard/Header/Head";
+import './displayuser.css'
 
 export default function Displayuser(){
     return(
         <>
         <Head></Head>
-        <div className="profile">
+        <div className="user-profile">
+         <div className="profile-pic">
+        <img src="Images/profile-pic.png"/>
+        </div>   
+        <div className="profile-content">
         <div className="profile-row">
         <label>First Name: </label>
         <div>Sowmya</div>
@@ -33,26 +38,8 @@ export default function Displayuser(){
         <label>Current Company: </label>
         <div>abc</div>
         </div>
-        <label>Current Role: </label>
-        <div>abc</div>
         </div>
-        <div>
-        <label>CTC: </label>
-        <div>abc</div>
-        </div>
-        <div>
-        <label>Skills: </label>
-        <div>abc</div>
-        </div>
-        <div>
-
-
-        </div>
-
-
-
-        </div>
-        
+        </div>  
         </>
 
 

@@ -5,7 +5,7 @@ import Loginpage from './Components/Home/Loginpage';
 import Useraccount from './Components/UserInfo/Useraccount';
 import Profile from './Components/UserInfo/Profile'
 import Head from './Components/Dashboard/Header/Head';
-import Subheader from './Components/Dashboard/Subheader/Subheader';
+import Subheader from './Components/Dashboard/Subheader/Subheader-1';
 import Appliedjobs from './Components/Dashboard/Jobs/Appliedjobs';
 import Alljobs from './Components/Dashboard/Jobs/Alljobs';
 import Eligiblejobs from './Components/Dashboard/Jobs/Eligiblejobs';
@@ -14,13 +14,20 @@ import Rejected from './Components/Dashboard/Application/Rejected';
 import Interviewing from './Components/Dashboard/Application/Interviewing';
 import Offered from './Components/Dashboard/Application/Offered';
 import Dashboard from './Components/Dashboard/Dashboard';
+import Displayuser from './Components/User/Displayuser';
+import DataContext from './Components/Context/DataContext';
+import { useState } from 'react';
 
 
 function App() {
+  let [status,setStatus] = useState(false)
   return (
     <>
+    
+  
+      <DataContext.Provider value={{status,setStatus}}>
       <Routes>
-        <Route path='/' element={<Launchpage />}></Route>
+      <Route path='/' element={<Launchpage />}></Route>
         <Route path='/login' element={<Loginpage />}></Route>
         <Route path='/signup' element={<Useraccount />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
@@ -32,7 +39,11 @@ function App() {
         <Route path='/rejected' element={<Rejected />}></Route>
         <Route path='/interviewing' element={<Interviewing />}></Route>
         <Route path='/offered' element={<Offered />}></Route>
-      </Routes>
+        <Route path='/userprofile' element={<Displayuser />}></Route>
+        </Routes>
+      </DataContext.Provider>
+       
+    
 
     </>
   );

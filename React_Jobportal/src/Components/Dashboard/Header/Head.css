@@ -1,10 +1,11 @@
 .header
 {
-    height: 56px;
-    width: 1369px;
-    background-color: #006FCB;
- 
-   
+    height: 10%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background-color: #006FCB; 
     display: flex;
     justify-content: space-between;
     align-items: center;

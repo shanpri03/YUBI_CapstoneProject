@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 resources :joblist
 resources :profile, only: [:create,:show,:update,:destroy]
 resources :jobdetail
+resources :skill
 end

@@ -1,8 +1,18 @@
+import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Head.css";
 function Head()
 {
+  let navigate =useNavigate();
+const fetchlogout =async ()=>{
+    let res = await axios.get('/logout')
+    console.log(res.data)
+    if(res.data){
+      navigate('/')
+    }
+}
+
     return(
         <div className="header">
           <div className="sec1">
@@ -14,6 +24,7 @@ function Head()
           <Link to='/alljobs'><div> Applied Jobs</div> </Link>
           <div> Activity</div> 
           <div> Job Agent</div> 
+          <div><button onClick={fetchlogout}>logout</button></div>
           </div>
           <div className="sec3">
           <img src="Images\SigninLogo.png" alt="Singup Logo"/>

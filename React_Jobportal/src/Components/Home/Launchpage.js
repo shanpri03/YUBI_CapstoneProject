@@ -8,7 +8,7 @@ function Launchpage()
     return(
         <>
     <div className="launch">
-        <div className="header">
+        <div className="launch-header">
         <div className="sec1">
         <img src="Images\HVLogo.png" alt="HV Logo"/>
         </div>

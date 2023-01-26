@@ -23,11 +23,17 @@ function Profile() {
     console.log(data)
     let response = await axios.post('/profile', data);
     console.log(response.data)
-    navigate('/')
+    if(response.data){
+      navigate('/dashboard')
+
+    }else{
+      navigate('/')
+    }
+    
   }
   return (
-    <>
-      <div className="profile">
+    <div className="profile">
+      <div >
         <div className="prof-header">
           <div className="header-img">
             <img src="Images\HVLogo.png" alt="HVLogo" />
@@ -35,29 +41,31 @@ function Profile() {
         </div>
         <div className="prof-content">
           <div className="prof-input">
+          <div className="prof-row">
             <h2>Please update your profile: </h2>
-            <div className="prof-row">
-              <label>Email : </label>
-              <input type="text" name='email' onChange={handleChange} />
             </div>
             <div className="prof-row">
-              <label>Name : </label>
-              <input type="text" name='name' onChange={handleChange} />
+              <label>First Name : </label>
+              <input type="text" name='first_name' onChange={handleChange} />
             </div>
-
             <div className="prof-row">
-              <label>Phone number: </label>
-              <input type="text" name='phno' onChange={handleChange} />
+              <label>Last Name : </label>
+              <input type="text" name='last_name' onChange={handleChange} />
             </div>
 
             <div className="prof-row">
-              <label>Current Company : </label>
-              <input type="text" name='currentcomp' onChange={handleChange} />
+              <label>Contact: </label>
+              <input type="text" name='contact' onChange={handleChange} />
+            </div>
+
+            <div className="prof-row">
+              <label>Address: </label>
+              <input type="text" name='address' onChange={handleChange} />
             </div>
 
             <div className="prof-row">
               <label>Current Role : </label>
-              <input type="text" name='currentrole' onChange={handleChange} />
+              <input type="text" name='current_comp' onChange={handleChange} />
             </div>
 
             <div className="prof-row">
@@ -65,31 +73,52 @@ function Profile() {
               <textarea name="about" rows='2' cols='20' onChange={handleChange} ></textarea>
             </div>
             <div className="prof-row">
+              <label>Experience: </label>
+              <input type="number" name='experience' onChange={handleChange} />
+            </div>
+            <div className="prof-row">
               <label>Upload your profile picture: </label>
-              <input type="file" name="profpic" onChange={handleChange} />
+              <input type="file" name="prof_pic" onChange={handleChange} />
             </div>
 
             <div className="prof-row">
               <label>Upload your CV :</label>
-              <input type="file" name="profcv" onChange={handleChange} />
+              <input type="file" name="resume_link" onChange={handleChange} />
             </div>
 
             <div className="prof-row">
               <label>Skills: </label>
               <textarea name="skills" rows='2' cols='20' onChange={handleChange} ></textarea>
             </div>
+            <div className="prof-row">
+              <label>Experience: </label>
+              <input type="text" name="experience" onChange={handleChange} />
+            </div>
+            <div className="prof-row">
+              <label>Current Role: </label>
+              <input type="text" name="current_role" onChange={handleChange} />
+            </div>
+            <div className="prof-row">
+              <label>Expected Salary:</label>
+              <input type="text" name="exp_salary" onChange={handleChange} />
+            </div>
+            <div className="prof-row">
+              <label>Current Role: </label>
+              <input type="text" name="pref_loc" onChange={handleChange} />
+            </div>
             <div  className="prof-row-sub">
               <input type="submit" className="prof-sub" onClick={sendData}></input>
             </div>
           </div>
-         
-        </div>
-        <div>
+          <div>
             <Link to="/dashboard" style={{ color: "black" }} >
              <h4> Go to Dashboard </h4>
             </Link>
           </div>
-        <div className="prof-footer">
+         
+        </div>
+     
+        {/* <div className="prof-footer">
         <p>&copy; 2021 All rights reserved</p>
         <div className="social">
         <p><b>Follow us on :</b></p>
@@ -101,10 +130,10 @@ function Profile() {
         <a href="#" class="fa fa-instagram"></a>
         <a href="#" class="fa fa-pinterest"></a>
         </div> 
-        </div>  
+        </div>   */}
       </div>
 
-    </>
+    </div>
   )
 }
 export default Profile;

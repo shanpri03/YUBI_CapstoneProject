@@ -5,7 +5,8 @@ import './account.css'
 
 function Useraccount()
 {
-  let [data,setData] =useState([]);
+  let [data,setData] =useState({});
+  let[type,setType] =useState("")
   let navigate = useNavigate();
 
   const handleChange =(e)=>{
@@ -16,8 +17,21 @@ function Useraccount()
   console.log(data)
   }
 const sendData = async() =>{
+  setType("working")
+  setData({
+    ...data,
+    user_type:type
+  })
+  console.log(data)
   let response = await axios.post('/signup',data);
   console.log(response.data)
+  if(response.data){
+    navigate('/dashboard')
+
+  }else{
+    navigate('/')
+  }
+
   if (response.data)
   {
     navigate('/profile',{
