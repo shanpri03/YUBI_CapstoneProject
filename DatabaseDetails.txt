@@ -1,4 +1,4 @@
-database name:	jobdb
+Database name:	jobdb
 
 tables:
 
