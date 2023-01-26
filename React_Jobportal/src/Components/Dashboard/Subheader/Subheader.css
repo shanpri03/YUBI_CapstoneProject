@@ -47,6 +47,8 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
+    background: #FFFFFF;
+
   }
   
   .sec1-a>img {
@@ -81,6 +83,8 @@
     justify-items: center;
     align-items: center;
     margin: 20px;
+    background: #FFFFFF;
+
   }
   
   .sec1-b-col {
@@ -116,6 +120,8 @@
     justify-items: center;
     align-items: center;
     margin: 20px;
+    background: #FFFFFF;
+
   
   }
   
@@ -150,6 +156,8 @@
     justify-items: center;
     align-items: center;
     margin: 20px;
+    background: #FFFFFF;
+
   
   }
   
@@ -353,8 +361,15 @@
     cursor: pointer;
   }
   .job-details {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
+    margin:  10px;
+    background: #FFFFFF;
+
+   
+  }
+  .job-details:hover{
+    border: 1px solid black ;
    
   }
   
@@ -424,8 +439,7 @@
   }
   .job-content{
     width:80%;
-    height:10%;
-    background: #EFF6FF;
-    border-radius: 1px solid black ;
+    height:50%;
+  
   }
   

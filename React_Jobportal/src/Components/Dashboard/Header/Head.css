@@ -11,7 +11,7 @@
     overflow-x: visible;
 }
 .sec1{
-    height: 70%;
+    height: 100%;
     width: 20%;
     padding: 0%;
     display: flex;
@@ -54,8 +54,8 @@ align-items: flex-start;
 .sec1>img
 {
     
-    height: 121%;
-    width:97%;
+    height:100%;
+    width:50%;
     top: 5px;
    
   padding: 2px 5px;

@@ -42,7 +42,7 @@ function Loginpage() {
             <input type ="text" name="email" placeholder="Enter your name" onChange={handleChange}/><br></br>
             <input type ="password" name="password" placeholder="Enter your password" onChange={handleChange}/><br></br>
             <input type ="submit" value="submit" onClick={sendData}/><br></br>
-            <Link to="/signup" style={{color:"white"}} >
+            <Link to="/signup" style={{color:"black"}} >
             Click here to signup
             </Link>
         </div>

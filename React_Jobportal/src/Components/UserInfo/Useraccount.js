@@ -51,7 +51,7 @@ const sendData = async() =>{
 
     return(
       <>
-      { ctx.status ?(
+
         <div className="account">
         <div className="header">
         <div className="acc-sec1">
@@ -99,7 +99,7 @@ const sendData = async() =>{
                
        </div>
 
-      ):<Navigate to ="/"></Navigate>}
+  
       </>
        
     );

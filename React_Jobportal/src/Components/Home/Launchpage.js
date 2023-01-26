@@ -23,7 +23,7 @@ function Launchpage()
         Hero Vired’s vision is to use modern and experiential pedagogical methods to provide holistic learning. We create highly skilled professionals not only for the present, but also for the yet-to-be created jobs of the future. Our goal is to prepare them to become the reliable first choice in a rapidly transforming digital economy.
         </div>
         <div className="section2">            
-        <Loginpage></Loginpage>    
+        <Loginpage></Loginpage>
         </div>  
         </div> 
         <div className="footer">

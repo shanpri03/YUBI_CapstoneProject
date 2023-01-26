@@ -7,19 +7,23 @@ import DataContext from "../Context/DataContext.js";
 export default function Dashboard(){
 let ctx =useContext(DataContext);
 console.log(ctx.status)
+
 console.log(ctx.email)
 console.log(ctx.id)
 let navigate = useNavigate();
 return(
 <>
-{ctx.status ?(
+<Head/>
+<Subheader/>
+
+{/* {ctx.status ?(
         <>
 <Head/>
 <Subheader/>
 </>
 ) :<Navigate to='/'/>
 
-}
+} */}
 </>
 ) 
 }
