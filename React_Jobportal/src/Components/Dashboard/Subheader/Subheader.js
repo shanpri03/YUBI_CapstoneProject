@@ -194,43 +194,13 @@ export default function Subheader() {
               )):<div>No data</div>}
            
               
-              </>   
-         
-           <div className="job-details">
-              <div className="job-desc">
-              <h3> JPC 1692 Developer Jobs</h3>
-              <button className="apply-btn">apply</button>
-              </div>
-              <div className="job-head">
-                 <div className="job-head-1">
-                    <img src="Images\Location.png" alt="All jobs Logo" />
-                    <p>Mumbai, Maharashtra</p>      
-                    </div>
-                 <div className="job-head-2">
-                    <img src="Images\FullTime.png" alt="Full time Logo" />
-                    <p>Full Time Job</p>
-                 </div>
-                 <div className="job-head-3">
-                    <img src="Images\Salary.png" alt="Salary Logo" />
-                   <p> 100-110$</p>
-                 </div>
-                 <div className="job-head-4">
-                    <img src="Images\Building.png" alt="Building Logo" />
-                    <p>CEIPAL</p>
-                 </div>
-              </div>
-              <div className="job-content">
-                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat nulla ligula, vitae sodales quam dignissim venenatis. Phasellus et aliquet neque. Praesent sed rutrum urna. Etiam luctus egestas arcu a lobortis. Cras consectetur accumsan magna, vel mollis tellus dapibus et. Phasellus sit amet nisl sed libero ornare molestie. Duis sollicitudin porta orci non varius. Aenean elit ipsum, ullamcorper a ullamcorper mattis, commodo sed ipsum. Proin elementum dui nibh, nec hendrerit liber
-                 </p>
-              </div>
-
-          
+              </>  
            </div>
         
         </div>
-     </div>
    
     
      </>
+
    );
 }

@@ -1,6 +1,7 @@
 import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { useNavigate, Navigate} from "react-router-dom";
+import DataContext from "../Context/DataContext";
 import './account.css'
 
 function Useraccount()
@@ -8,6 +9,9 @@ function Useraccount()
   let [data,setData] =useState({});
   let[type,setType] =useState("")
   let navigate = useNavigate();
+  let ctx = useContext(DataContext)
+
+
 
   const handleChange =(e)=>{
     setData({
@@ -26,7 +30,7 @@ const sendData = async() =>{
   let response = await axios.post('/signup',data);
   console.log(response.data)
   if(response.data){
-    navigate('/dashboard')
+    navigate('/profile')
 
   }else{
     navigate('/')
@@ -39,15 +43,15 @@ const sendData = async() =>{
           email:data.email
       }
     })
-
   }else{
     navigate('/signup')
   }
 
-
 }
 
     return(
+      <>
+      { ctx.status ?(
         <div className="account">
         <div className="header">
         <div className="acc-sec1">
@@ -94,6 +98,10 @@ const sendData = async() =>{
         </div>  
                
        </div>
+
+      ):<Navigate to ="/"></Navigate>}
+      </>
+       
     );
     }
 export default Useraccount;

@@ -21,7 +21,7 @@ const fetchlogout =async ()=>{
           </div>
           <div className="sec2">
           <Link  to='/dashboard'><div>Dashboard</div></Link>
-          <Link to='/profile'> <div> Application Profile</div></Link> 
+          <Link to='/userprofile'> <div> Application Profile</div></Link> 
           <Link to='/alljobs'><div> Applied Jobs</div> </Link>
           <div> Activity</div> 
           <div> Job Agent</div> 

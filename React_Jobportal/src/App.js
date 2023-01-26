@@ -21,11 +21,13 @@ import { useState } from 'react';
 
 function App() {
   let [status,setStatus] = useState(false)
+  let [email,setEmail] = useState('')
+  let [uid,setUid] = useState(0)
   return (
     <>
     
   
-      <DataContext.Provider value={{status,setStatus}}>
+      <DataContext.Provider value={{status,setStatus,email,setEmail,uid,setUid}}>
       <Routes>
       <Route path='/' element={<Launchpage />}></Route>
         <Route path='/login' element={<Loginpage />}></Route>

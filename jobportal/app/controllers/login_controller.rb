@@ -5,7 +5,7 @@ class LoginController < ApplicationController
 def index
 current_user = User.find_by_id(session[:current_user_id])
 if !current_user.nil?
-render json:"true"
+render json: true
 else
 render json:"false"
 end
@@ -18,7 +18,7 @@ if u.nil?
 else
  if u.authenticate(params[:password])
     session[:current_user_id]=u.id
-    render json:"true"
+    render json: [u]
  else
     render json:"false"
 end 

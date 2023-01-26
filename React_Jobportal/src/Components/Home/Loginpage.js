@@ -21,9 +21,13 @@ function Loginpage() {
         let res = await axios.post('/login', data)
         let status = res.data
         console.log(res.data)
-        if (res.data) {
+        if (res.data.length) {
             ctx.setStatus(true)
+            ctx.setEmail(data.email)
+            ctx.setUid(data.id)
             console.log(ctx.status)
+            console.log(ctx.email)
+            console.log(ctx.id)
             navigate('/dashboard')
         } else {
             navigate('/')
