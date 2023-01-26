@@ -1,0 +1,76 @@
+
+.header
+{
+    height: 10%;
+    width: 100%;
+    background-color: #006FCB;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: visible;
+}
+.sec1{
+    height: 100%;
+    width: 20%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+  text-align:right;
+    justify-content: space-around;
+}
+.sec2>div
+{
+    
+    font-family: Roboto;
+font-style: normal;
+font-size: 16px ;
+line-height:24px ;
+align-items: flex-start;
+
+}
+.sec2{
+
+    display: flex;  
+    position: relative;
+    height: 70%;
+     width: 60%;
+    color: black;
+    font-weight: bold;
+    align-items: center;
+    align-content: flex-start;
+  text-align:left;
+    justify-content: space-around;
+    
+ 
+    
+}
+.sec3{
+   
+     width: 7%;
+    
+}
+.sec1>img
+{
+    
+    height:114%;
+    width:70%;
+    top: 5px;
+   
+  padding: 2px 5px;
+
+  
+
+
+}   
+.sec3>img
+{
+    
+    height: 5vh;
+    width:5vh;
+ padding: 0%;
+    
+}
+
+
