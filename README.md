@@ -2,17 +2,16 @@
 
 Title : JOB Portal Application.
 
-Tool Used .
+Tool Used.
    Front End : React, 
    Back End : Ruby on Rails, 
    Database : postgresql
 
 Contributed by : Sowmiya and Priya.
 
-About React
+About React.
 
-The main objective of ReactJS is to develop User Interfaces (UI) that improves the speed of the apps. It uses virtual DOM (JavaScript object), 
-which improves the performance of the app.
+The main objective of ReactJS is to develop User Interfaces (UI) that improves the speed of the apps. It uses virtual DOM.
 
 Note: React is not a framework. It is just a library
 
@@ -36,10 +35,8 @@ Install React using create-react-app, a tool that installs all of the dependenci
  Install : npm install 
 
  Check the version : node -v 
- If the version is displayed, it is installed successfully and
-we are ready to build awesome websites and app.
-
-
+ 
+ If the version is displayed, we are ready to build awesome websites and app.
 
 About Rails.
 
@@ -56,13 +53,12 @@ Installing Rails and psql database
  The program should report its version on running the following command
  * rails --version
  * psql --version
- * 
+ 
  If it says something like "Rails 7.0.0", you are ready to continue.
  
  Creating the application.
  
 1. Open command prompt, and login to psql with the user id and password.
-   Command: 
    psql -U usernane
    password
 
@@ -70,26 +66,29 @@ Installing Rails and psql database
    rails new application_name -d postgresql
    
 3. This will open a new applicaion using preferred editor VS Code. Get your Rails application server running, 
-
 by the command : rails s
 
 4. This will start up Puma, a web server distributed with Rails by default. To see your application in action, open a browser window and navigate to http://localhost:3000. 
+
 5.   You should see the Rails default information page.
 
 The application is ready for development.
 
-
 Rails work in MVC Framework.
 
 Define the routes in routes.rb file
+
 Configure the database.yml file with the database name, username and password.
 
 To generate a controller. 
    rails generate contoller (name here)
+   
 To generate migration file
    rails generate migration create_migration (name here)
+   
 To migrate the file
     rails db:migrate
+    
 To interact with database
     rails c
 
