@@ -1,12 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
 import "./Subheader.css"
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react";
+import DataContext from "../../Context/DataContext";
 export default function Subheader() {
    
     let [data,setdata] = useState([]);
     let navigate=useNavigate();
+    let [jobCont,setjobCont]=useState({})
+    let ctx =useContext(DataContext)
    
     useEffect(() => {
        const fetchData = async () => {
@@ -26,7 +29,18 @@ export default function Subheader() {
      fetchlogout()
     }, [])
    
-    
+    const handleClick =(e)=>{
+      let job_id =e.target.value
+      setjobCont(...jobCont,{job_id:job_id,user_id:ctx.uid})
+      console.log(setjobCont);
+      sendJobContentData();
+
+    }
+    const sendJobContentData =async ()=>{
+        let res = await axios.post('/joblist',jobCont)
+        console.log(res.data)
+    }
+
    return (
     <>
  
@@ -164,7 +178,7 @@ export default function Subheader() {
                    <div className="job-details">
                    <div className="job-desc">
                       <h3>{ele.jobTitle}-{ele.jobCode}</h3>
-                      <button className="apply-btn">apply</button>
+                      <button name='job_id' value ={ele.id} className="apply-btn" onClick={handleClick}>apply</button>
                       </div>
                       <div className="job-head">
                          <div className="job-head-1">
@@ -181,7 +195,7 @@ export default function Subheader() {
                          </div>
                          <div className="job-head-4">
                             <img src="Images\Building.png" alt="Building Logo" />
-                            <p>CEIPAL</p>
+                            <p>{ele.companyName}</p>
                          </div>
                       </div>
                       <div className="job-content">
