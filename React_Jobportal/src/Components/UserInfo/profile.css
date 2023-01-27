@@ -44,13 +44,21 @@ height: 100%;
     margin-bottom: 15px;
 }
 
-.prof-content>.prof-input>.prof-row>input {
-    width: 300px;
-    height: 30px;
+.prof-content>.prof-input>.prof-row>input,select{
+    width: 30%;
+    height: 50%;
     border-radius: 10px;
     margin-left: 10px;
     padding: 5px;
 
+
+}
+.prof-content>.prof-input>.prof-row>select{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 5px;
 
 }
 
@@ -65,10 +73,11 @@ height: 100%;
 }
 
 .prof-content>.prof-input>.prof-row>label {
-    width:12%;
+    width:13%;
     height: 50%;
     font-weight: bolder;
     font-size: medium;
+   
 
 }
 
