@@ -1,12 +1,15 @@
 import React, { useContext } from "react"
 import "./Subheader.css"
 import axios from "axios";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate,Link } from "react-router-dom";
 import { useState,useEffect } from "react";
 import DataContext from "../../Context/DataContext";
 export default function Subheader() {
    
     let [data,setdata] = useState([]);
+    let[stat,setStat] =useState(false)
+    let[statusData,setStatusData]=useState([])
+    let[elData,setElData]=useState([])
     let navigate=useNavigate();
     let [jobCont,setjobCont]=useState({})
     let ctx =useContext(DataContext)
@@ -16,18 +19,27 @@ export default function Subheader() {
           let res = await axios.get('/jobdetail');
           setdata(res.data);
        }
-       fetchData();
-       const fetchlogout =async ()=>{
-         let res = await axios.get('/login')
+
+       const fetchStatus =async ()=>{
+         let res = await axios.get('/getstatus');
          console.log(res.data)
-         if(!res.data){
-           navigate('/')
-         }else{
-            navigate('/dashboard')
-         }
-     }
-     fetchlogout()
-    }, [])
+         setStatusData(res.data);
+       }
+
+       const fetchEligible =async ()=>{
+         let res = await axios.get('/eligiblejobs');
+         console.log(res.data)
+         setElData(res.data);
+        
+        
+       }
+       setStat(true)
+       fetchData();
+       fetchStatus();
+       fetchEligible();
+       console.log(statusData)
+       console.log(elData)
+    }, [stat])
    
     const handleClick =(e)=>{
       let job_id =e.target.value
@@ -41,6 +53,18 @@ export default function Subheader() {
         console.log(res.data)
     }
 
+
+    let shortListedData = 
+    
+    statusData.filter((ele) => ele.status.toLowerCase() == "shortlisted" )
+    let interviewistedData = statusData.filter((ele) => ele.status.toLowerCase() == "interviewed" )
+    let rejectedData = statusData.filter((ele) => ele.status.toLowerCase() == "rejected" )
+    let appliedData = statusData.filter((ele) => ele.status.toLowerCase() == "applied" )
+    let offerData = statusData.filter((ele) => ele.status.toLowerCase() == "offered" )
+    
+    
+    
+
    return (
     <>
  
@@ -49,29 +73,38 @@ export default function Subheader() {
         <div className="head1">
            <h2>Snapshots</h2>
         </div>
-                
+          
         <div className="sections">
-           <div className="sec1-a">
+
+         <Link>
+         <div className="sec1-a">
               <img src="Images\AllJobs.png" alt="All jobs Logo" />
               <div className="sec1-a-col">
                  <h5>All Jobs</h5>
-                 <p>100</p>
+                 <p>{data.length}</p>
               </div>
            </div>
+         </Link>
+     
+           <Link to='/eligiblejobs'>
            <div className="sec1-b">
               <img src="Images\AllJobs.png" alt="All jobs Logo" />
               <div className="sec1-b-col">
                  <h5>Eligible Jobs</h5>
-                 <p>80</p>
+                 <p>{elData.length}</p>
               </div>
-           </div>
+           </div></Link>
+     
+           <Link to ="/appliedjobs">
            <div className="sec1-c">
               <img src="Images\AllJobs.png" alt="Alljobs Logo" />
               <div className="sec1-c-col">
                  <h5>Applied Jobs</h5>
-                 <p>50</p>
-              </div>
+                 <p>{appliedData.length}</p>
+              </div>   
            </div>
+           </Link>
+   
         </div>
         </div>
         <div className="section-2">
@@ -83,28 +116,28 @@ export default function Subheader() {
               <img src="Images\AllJobs.png" alt="All jobs Logo" />
               <div className="sec1acol">
                  <h5>Shortlisted</h5>
-                 <p>100</p>
+                 <p>{shortListedData.length}</p>
               </div>
            </div>
            <div className="sec1-b">
               <img src="Images\AllJobs.png" alt="All jobs Logo" />
               <div className="sec1-b-col">
                  <h5>Interviewing</h5>
-                 <p>80</p>
+                 <p>{interviewistedData.length}</p>
               </div>
            </div>
            <div className="sec1-c">
               <img src="Images\AllJobs.png" alt="All jobs Logo" />
               <div className="sec1-c-col">
                  <h5>Rejected</h5>
-                 <p>50</p>
+                 <p>{rejectedData.length}</p>
               </div>
            </div>
            <div className="sec1-d">
               <img src="Images\AllJobs.png" alt="All jobs Logo" />
               <div className="sec1-d-col">
-                 <h5>Offer Received</h5>
-                 <p>5</p>
+                 <h5>Offered</h5>
+                 <p>{offerData.length}</p>
               </div>
            </div>
         </div>

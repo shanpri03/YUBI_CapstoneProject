@@ -16,5 +16,9 @@ resources :jobdetail
 resources :skill
 resources :joblist, only: [:create,:show,:update,:destroy]
 get 'joblist', to:"joblist#index"
+resources :status
+get 'getstatus',to:"status#index"
 put 'statupdate', to:"joblist#update"
+resources :eligible
+get 'eligiblejobs', to:"eligible#index"
 end

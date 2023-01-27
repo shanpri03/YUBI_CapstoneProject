@@ -1,13 +1,21 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate, Link, Navigate } from "react-router-dom";
 import DataContext from "../Context/DataContext";
 import './profile.css'
+import { MultiSelect } from "react-multi-select-component";
 function Profile() {
   let location = useLocation();
-  let[skill,setSkill]= useState([])
+  const options = [
+    { label: "Grapes ", value: "grapes" },
+    { label: "Mango ", value: "mango" },
+    { label: "Strawberry ", value: "strawberry", disabled: true },
+  ];
+  const [selected, setSelected] = useState([]);
+  
   let [data, setData] = useState({});
-  let [email, setEmail] = useState('');
+  let [email, setEmail] = useState("");
+  let [skill, setSkill] = useState("");
   let ctx = useContext(DataContext)
   let navigate = useNavigate();
   const handleChange = (e) => {
@@ -16,27 +24,30 @@ function Profile() {
 
     })
   }
-  const handleClick =(e)=>{
-    setSkill([...skill,e.target.value])
-    console.log(skill)
+
+  const handleClick = (e) => {
+    let str = [];
+    var selectedEle = document.getElementById("skillid").selectedOptions
+    for (var i = 0; i < selectedEle.length; i++) {
+      str.push(selectedEle[i].value)
+    }
+    console.log(str);
+    setSkill(str.toString())
+    console.log(skill);
+    
 
   }
+  useEffect(() => {
+
+  }, [])
+  useEffect(()=>{setData({...data,skills : skill,email: location.state.email})},[skill])
   const sendData = async () => {
-    //setEmail(location.state.email)
-    console.log(email)
-    setData({
-      ...data,
-      email: email,skills:skill
-    })
-    setData({
-      ...data,
-      skills:skill
-    })
+    setData({...data,skills : skill})
     console.log(data)
     let response = await axios.post('/profile', data);
     console.log(response.data)
     if (response.data) {
-      navigate('/')
+      navigate('/dashboard')
     } else {
       navigate('/')
     }
@@ -102,7 +113,7 @@ function Profile() {
 
                 <div className="prof-row">
                   <label>Skills: </label>
-                  <select name="skills" id="skid" onClick={handleClick}  multiple>
+                  <select name="skills" id="skillid" onClick={handleClick} multiple>
                     <option value="Java">JAVA</option>
                     <option value=".Net">.Net</option>
                     <option value="PHP">PHP</option>

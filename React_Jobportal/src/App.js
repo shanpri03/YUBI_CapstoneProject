@@ -36,7 +36,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/alljobs' element={<Alljobs/>}></Route>
         <Route path='/appliedjobs' element={<Appliedjobs />}></Route>
-        <Route path='/elligiblejobs' element={<Eligiblejobs />}></Route>
+        <Route path='/eligiblejobs' element={<Eligiblejobs />}></Route>
         <Route path='/shortlisted' element={<Shortlisted />}></Route>
         <Route path='/rejected' element={<Rejected />}></Route>
         <Route path='/interviewing' element={<Interviewing />}></Route>

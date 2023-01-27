@@ -21,13 +21,13 @@ class JoblistController < ApplicationController
         v=!params[:jobcode].empty? and !params[:jobtitle].empty? and !params[:location].empty? and !params[:posteddate].empty? and !params[:applieddate].empty? and !params[:status].empty?   and !params[:job_id].nil?
         if(v)
         if j.nil?
-        j = jobdetail.find_by_id(params[:job_id])
-         Job.create('jobcode': j.jobCode, 
-            'jobtitle': j.jobTitle, 
+        j = Jobdetail.find_by_id(params[:job_id])
+         Job.create('jobcode': j.job_code, 
+            'jobtitle': j.job_title, 
             'location': j.location,
             'posteddate': j.created_at, 
             'applieddate': time, 
-            'status': "pending",
+            'status': params[:status],
              'user_id': params[:user_id],
             'job_id': params[:job_id])
          puts p

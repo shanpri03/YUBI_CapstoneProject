@@ -1,2 +1,0 @@
-class Jobcontent < ApplicationRecord
-end

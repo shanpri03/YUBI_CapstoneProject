@@ -1,24 +1,24 @@
 class JobdetailController < ApplicationController
     skip_before_action :verify_authenticity_token
     def index
-        render json: Jobcontent.all
+        render json: Jobdetail.all
 end
 
     def create
         time = Time.now
-        v=!params[:jobTitle].empty? && !params[:jobDescription].empty? && !params[:companyName].empty?&& !params[:location].empty? &&!params[:jobType].empty? &&!params[:salary].nil? && !params[:postedDate].empty? && !params[:domain].empty?&&!params[:jobCode].empty? &&!params[:skillsRequired].empty?&& params[:applicationStatus].empty?
+        v=!params[:job_title].empty? && !params[:job_description].empty? && !params[:company_name].empty?&& !params[:location].empty? &&!params[:job_type].empty? &&!params[:salary].nil? && !params[:posted_date].empty? && !params[:domain].empty?&&!params[:job_code].empty? &&!params[:skills_required].empty?&& params[:application_status].empty?
         if !v
-            jc = Jobcontent.create('jobTitle': params[:jobTitle], 
-            'jobDescription': params[:jobDescription], 
-            'companyName': params[:companyName],
+            jc = Jobdetail.create('job_title': params[:job_title], 
+            'job_description': params[:job_description], 
+            'company_name': params[:company_name],
             'location': params[:location], 
-            'jobType': params[:jobType], 
+            'job_type': params[:job_type], 
             'salary': params[:salary],
-            'postedDate': params[:postedDate],
+            'posted_date': params[:posted_date],
             'domain': params[:domain],
-            'jobCode': params[:jobCode],
-            'skillsRequired': params[:skillsRequired],
-            'applicationStatus': params[:applicationStatus])
+            'job_code': params[:job_code],
+            'skills_required': params[:skills_required],
+            'application_status': params[:application_status])
 
             Job.create('jobcode': params[:jobCode], 
                 'jobtitle':  params[:jobTitle], 

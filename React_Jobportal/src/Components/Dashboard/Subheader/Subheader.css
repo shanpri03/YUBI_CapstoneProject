@@ -36,8 +36,8 @@
   }
   
   .sec1-a {
-    height:80%;
-    width: 20%;
+    height: 100%;
+    width: 60%;
     left: 0px;
     top: 0px;
     border-radius: 7.5px;
@@ -72,8 +72,8 @@
   }
   
   .sec1-b {
-    height: 80%;
-    width: 20%;
+    height: 100%;
+    width: 60%;
     top: 0px;
     border-radius: 7.5px;
     border-radius: 7.5px;
@@ -107,9 +107,16 @@
     border: 1px solid black;
   }
   
-  .sec1-c {
+  .sections >a{
     height: 80%;
-    width: 20%;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+
+  }
+  .sec1-c {
+    height: 100%;
+    width: 60%;
     left: 328.5px;
     top: 0px;
     border-radius: 7.5px;
@@ -124,9 +131,11 @@
 
   
   }
+
+
   
   .sec1-c-col {
-    width: 50%;
+    width: 80%;
     height: 90%;
     justify-content: center;
     justify-items: center;

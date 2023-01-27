@@ -15,6 +15,8 @@
     text-align:right;
     justify-content: space-between;
 }
+
+
 .sec2>div
 {
     
@@ -46,9 +48,12 @@ align-items: flex-start;
 }
 .sec1>img
 {
-    height:100%;
-    width:70%;
+    height: 80%;
+    width: 70%;
+    left: 38px;
     top: 5px;
+    border-radius: 0px;
+    
  }   
 .sec3>img
 {  
