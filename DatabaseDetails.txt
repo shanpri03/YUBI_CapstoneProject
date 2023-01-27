@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 database name:	jobdb
+=======
+Database name:	jobdb
+>>>>>>> 568b925fd2594e5bddfe0bf938f6f44b16eb9411
 
 tables:
 
@@ -53,4 +57,8 @@ tables:
 		- candidateApplicationStatus
 		- location
 			(fetch from jobDetails)
+<<<<<<< HEAD
 		
+=======
+		
+>>>>>>> 568b925fd2594e5bddfe0bf938f6f44b16eb9411

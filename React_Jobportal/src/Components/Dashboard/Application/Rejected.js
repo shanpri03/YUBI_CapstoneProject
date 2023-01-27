@@ -17,62 +17,65 @@ function Rejected() {
       let filterData = jobData.filter((ele) => ele.status == "Rejected" )
       console.log(filterData)
     return (
-        <div className="test">
-        <Head></Head>
-        <div>
-        <h4>Rejected</h4>
-                            <input type="text" placeholder = "Title,Client,Location"></input>
-                            <button name =  "Search" >Search</button>
-                        </div>
-                        <br></br>
-                       
-                        <div className="head4">
-            <div class="Job">
-               <select  class="Jobdropdown-content">
-                  <option value="Alljobs">Alljobs</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select>
-               
-            </div>
-            <div class="Ind">
-            <select  class="Inddropdown-content">
-                  <option value="Alljobs">Industry</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select>          
-            </div>
-            <div class="Loc">
-            <select  class="Locdropdown-content">
-                  <option value="Alljobs">Location</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select> 
-          
-            </div>
-            <div class="Type">
-            <select  class="Typedropdown-content">
-                  <option value="Alljobs">Type</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select> 
-              </div>
+      <>
+      <Head/>
+      <div className="head3">
+         <h2>Rejected</h2>
+         <input  className='search-input' type="text" placeholder="Title,Client,Location"/>
+         <button name="Search" >Search</button>
+      </div>
+      <br></br>
 
-            <div class="Date">
-            <select  class="Datedropdown-content">
-                  <option value="Alljobs">Date</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select> 
-      
-            </div>
 
+      <div className="head4">
+         <div class="Job">
+            <select  class="Jobdropdown-content">
+               <option value="Alljobs">Alljobs</option>
+               <option value="saab">Saab</option>
+               <option value="mercedes">Mercedes</option>
+               <option value="audi">Audi</option>
+            </select>
+            
          </div>
+         <div class="Ind">
+         <select  class="Inddropdown-content">
+               <option value="Alljobs">Industry</option>
+               <option value="saab">Saab</option>
+               <option value="mercedes">Mercedes</option>
+               <option value="audi">Audi</option>
+            </select>          
+         </div>
+         <div class="Loc">
+         <select  class="Locdropdown-content">
+               <option value="Alljobs">Location</option>
+               <option value="saab">Saab</option>
+               <option value="mercedes">Mercedes</option>
+               <option value="audi">Audi</option>
+            </select> 
+       
+         </div>
+         <div class="Type">
+         <select  class="Typedropdown-content">
+               <option value="Alljobs">Type</option>
+               <option value="saab">Saab</option>
+               <option value="mercedes">Mercedes</option>
+               <option value="audi">Audi</option>
+            </select> 
+           </div>
+
+         <div class="Date">
+         <select  class="Datedropdown-content">
+               <option value="Alljobs">Date</option>
+               <option value="saab">Saab</option>
+               <option value="mercedes">Mercedes</option>
+               <option value="audi">Audi</option>
+            </select> 
+   
+         </div>
+
+      </div>
+        
+                   
                          
 
         <table>
@@ -81,9 +84,9 @@ function Rejected() {
           <tbody>
           {filterData.length ? 
             filterData.map(ele => (
-              <tr>
+              <tr align="center">
                 <td>{ele.id}</td> <td>{ele.jobcode}</td> <td>{ele.jobtitle}</td> <td>{ele.location}</td>
-                <td>{ele.posteddate}</td> <td>{ele.applieddate}</td> <td>{ele.status}</td>
+                <td>{ele.posteddate}</td> <td>{ele.applieddate}</td> <td style={{color:"red"}}>{ele.status}</td>
               </tr>
             )
            ): 
@@ -190,7 +193,8 @@ function Rejected() {
 
 
 
-                           </div>
+                           
+                           </>
     );
 }
 export default Rejected;

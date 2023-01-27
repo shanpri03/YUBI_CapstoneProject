@@ -18,15 +18,15 @@ function Eligiblejobs()
   }, [])
 
     return(
-<div className="test">
-  <Head></Head>
-    <div>
-<h4>Elligible Jobs</h4>
-                    <input type="text" placeholder = "Title,Client,Location"></input>
-                    <button name =  "Search" >Search</button>
-                </div>
-                <br></br>
-              
+      <>
+      <Head/>
+      <div className="subheader">
+         <div className="head3">
+        <h2>Eligible Jobs</h2>
+             <input  className='search-input' type="text" placeholder="Title,Client,Location"/>
+             <button name="Search" >Search</button>
+          </div>
+          <br></br>
 
                 <div className="head4">
             <div class="Job">
@@ -76,65 +76,47 @@ function Eligiblejobs()
 
          </div>
 
-               
-                {data.map((ele) =>
-       <div className="head5">
-          <div className="head5t">
-          
-            <h3>
-              
-              <div>
-              
-                {ele.jobCode} -  {ele.jobTitle}
-              </div>
-            </h3>
-            <div className="head5ta">
-              <div className="head5da">
-                <img src="Images\Location.png" alt="All jobs Logo" />
-                <div>
-                  {ele.location}
-                </div>
-              </div>
-              <div className="head5db">
-                <img src="Images\Salary.png" alt="Full time Logo" />
-                <div>
-                  {ele.jobType}
-                </div>
-              </div>
-              <div className="head5dc">
-                <img src="Images\Salary.png" alt="Salary Logo" />
-                <div>
-                  {ele.salary}
-                </div>
-              </div>
-              <div className="head5dd">
-                <img src="Images\Building.png" alt="Building Logo" />
-                <div>
-                  {ele.companyName}
-                </div>
-              </div>
-            </div>
-            <div className="head5tb">
-              <div>
-               
-               <p>{ele.jobDescription}</p> 
-               <p><br></br></p>
-            
-              </div>
-            </div>
-          
-          </div>
-        </div>
-         )}
+         <div className="head5">
+              <>
+              {data.length ? data.map((ele)=>(
+                   <div className="job-details">
+                   <div className="job-desc">
+                      <h3 style={{color:"blue"}}>{ele.jobTitle}-{ele.jobCode}</h3>
+                      <button className="apply-btn">apply</button>
+                      </div>
+                      <div className="job-head">
+                         <div className="job-head-1">
+                            <img src="Images\Location.png" alt="All jobs Logo" />
+                            <p>{ele.location}</p>      
+                            </div>
+                         <div className="job-head-2">
+                            <img src="Images\FullTime.png" alt="Full time Logo" />
+                            <p>{ele.jobType}</p>
+                         </div>
+                         <div className="job-head-3">
+                            <img src="Images\Salary.png" alt="Salary Logo" />
+                           <p> {ele.salary}</p>
+                         </div>
+                         <div className="job-head-4">
+                            <img src="Images\Building.png" alt="Building Logo" />
+                            <p>{ele.companyName}</p>
+                         </div>
+                      </div>
+                      <div className="job-content">
+                         <p> {ele.jobDescription}
+                         </p>
+                      </div>
+        
+                   </div>    
 
-          <div>
-          <br></br>
-          <br></br>
-            <Link to="/dashboard" style={{ color: "black" }} >
-             <h4> Go to Dashboard </h4>
-            </Link>
-          </div>
-</div>
-    );
+              )):<div>No data</div>}
+           
+              
+              </> 
+              </div>
+              </div>
+              
+</>
+    )
 }
 export default Eligiblejobs;

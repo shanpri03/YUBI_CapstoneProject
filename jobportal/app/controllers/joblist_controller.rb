@@ -16,30 +16,44 @@ class JoblistController < ApplicationController
     end
 
     def create
-        v=!params[:jobcode].empty?, !params[:jobtitle].empty?, !params[:location].empty?, !params[:posteddate].empty?, !params[:applieddate].empty?, !params[:status].empty?
+        time = Time.new
+        current_user = User.find_by_id(session[:current_user_id])
+        v=!params[:jobcode].empty? and !params[:jobtitle].empty? and !params[:location].empty? and !params[:posteddate].empty? and !params[:applieddate].empty? and !params[:status].empty?   and !params[:job_id].nil?
         if(v)
-         Job.create('jobcode': params[:jobcode], 
-            'jobtitle': params[:jobtitle], 
-            'location': params[:location],
-            'posteddate': params[:posteddate], 
-            'applieddate': params[:applieddate], 
-            'status': params[:status])
+        if j.nil?
+        j = jobdetail.find_by_id(params[:job_id])
+         Job.create('jobcode': j.jobCode, 
+            'jobtitle': j.jobTitle, 
+            'location': j.location,
+            'posteddate': j.created_at, 
+            'applieddate': time, 
+            'status': "pending",
+             'user_id': params[:user_id],
+            'job_id': params[:job_id])
          puts p
          render json: "Job details added successfully"
+         else
+            render json: "Job details not added"
+         end
         else
          render json: "Job details not added"
         end
     end
     
     def update
-        b = Job.find(params[:id].to_i)
-        b.update('jobcode': params[:jobcode], 'jobtitle': params[:jobtitle], 'location': params[:location],'posteddate': params[:posteddate], 'applieddate': params[:applieddate], 'status': params[:status])
+        b = Job.find_by(:job_id=> params[:job_id],:user_id=> params[:user_id])
+        if !b.nil?
+        b.update('status':"applied")
         render json: "Job details Updated"
+        else
+        render json: "false"
+        end
     end
 
     def destroy
         a = Job.find(params[:id].to_i)
         a.destroy
+
         render json: "Job details deleted successfully"
     end
 end

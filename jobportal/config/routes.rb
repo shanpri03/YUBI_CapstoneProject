@@ -8,10 +8,13 @@ Rails.application.routes.draw do
   get 'login', to:"login#index"
   post 'login', to:"login#create"
   get 'logout', to:"login#destroy"
-resources :joblist
+
 resources :profile, only: [:create,:show,:update,:destroy]
 get 'userprofile',to:"profile#index"
 get 'profile',to:"profile#create"
 resources :jobdetail
 resources :skill
+resources :joblist, only: [:create,:show,:update,:destroy]
+get 'joblist', to:"joblist#index"
+put 'statupdate', to:"joblist#update"
 end

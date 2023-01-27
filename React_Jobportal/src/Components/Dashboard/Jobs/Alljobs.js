@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Button } from "bootstrap";
-import "../Subheader/Subheader.css"
+import "../Subheader/Subheader.css";
 function Alljobs() {
   let [data, setdata] =   useState([]);
   useEffect(() => {
@@ -15,117 +15,109 @@ function Alljobs() {
     fetchData();
   }, [])
   return (
-    <div className="test">
-      <Head></Head>
-      <div>
-        <h4>Jobs in Domain</h4>
-        <input type="text" placeholder="Title,Client,Location"></input>
-        <button name="Search" >Search</button>
-      </div>
-      <br></br>
-      <div className="head4">
-            <div class="Job">
-               <select  class="Jobdropdown-content">
-                  <option value="Alljobs">Alljobs</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select>
-               
-            </div>
-            <div class="Ind">
-            <select  class="Inddropdown-content">
-                  <option value="Alljobs">Industry</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select>          
-            </div>
-            <div class="Loc">
-            <select  class="Locdropdown-content">
-                  <option value="Alljobs">Location</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select> 
-          
-            </div>
-            <div class="Type">
-            <select  class="Typedropdown-content">
-                  <option value="Alljobs">Type</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select> 
-              </div>
-
-            <div class="Date">
-            <select  class="Datedropdown-content">
-                  <option value="Alljobs">Date</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-               </select> 
-      
-            </div>
-
-         </div>
-      
-      {data.map((ele) =>
-       <div className="head5">
-          <div className="head5t">
-            <h3>
-              <div>
-                <br></br>
-                {ele.jobCode} -  {ele.jobTitle}
-              </div>
-            </h3>
-            <div className="head5ta">
-              <div className="head5da">
-                <img src="Images\Location.png" alt="All jobs Logo" />
-                <div>
-                  {ele.location}
-                </div>
-              </div>
-              <div className="head5db">
-                <img src="Images\Salary.png" alt="Full time Logo" />
-                <div>
-                  {ele.jobType}
-                </div>
-              </div>
-              <div className="head5dc">
-                <img src="Images\Salary.png" alt="Salary Logo" />
-                <div>
-                  {ele.salary}
-                </div>
-              </div>
-              <div className="head5dd">
-                <img src="Images\Building.png" alt="Building Logo" />
-                <div>
-                  {ele.companyName}
-                </div>
-              </div>
-            </div>
-            <div className="head5tb">
-              <div>
-               
-                {ele.jobDescription}
-            
-              </div>
-            </div>
-          
-          </div>
+    <>
+    <Head/>
+    <div className="subheader">
+       <div className="head3">
+      <h2>All Jobs in Domain</h2>
+           <input  className='search-input' type="text" placeholder="Title,Client,Location"/>
+           <button name="Search" >Search</button>
         </div>
-         )}
+        <br></br>
 
-          <div>
-          <br></br>
-          <br></br>
-            <Link to="/dashboard" style={{ color: "black" }} >
-             <h4> Go to Dashboard </h4>
-            </Link>
-          </div>
+
+        <div className="head4">
+           <div class="Job">
+              <select  class="Jobdropdown-content">
+                 <option value="Alljobs">Alljobs</option>
+                 <option value="saab">Saab</option>
+                 <option value="mercedes">Mercedes</option>
+                 <option value="audi">Audi</option>
+              </select>
+              
+           </div>
+           <div class="Ind">
+           <select  class="Inddropdown-content">
+                 <option value="Alljobs">Industry</option>
+                 <option value="saab">Saab</option>
+                 <option value="mercedes">Mercedes</option>
+                 <option value="audi">Audi</option>
+              </select>          
+           </div>
+           <div class="Loc">
+           <select  class="Locdropdown-content">
+                 <option value="Alljobs">Location</option>
+                 <option value="saab">Saab</option>
+                 <option value="mercedes">Mercedes</option>
+                 <option value="audi">Audi</option>
+              </select> 
+         
+           </div>
+           <div class="Type">
+           <select  class="Typedropdown-content">
+                 <option value="Alljobs">Type</option>
+                 <option value="saab">Saab</option>
+                 <option value="mercedes">Mercedes</option>
+                 <option value="audi">Audi</option>
+              </select> 
+             </div>
+
+           <div class="Date">
+           <select  class="Datedropdown-content">
+                 <option value="Alljobs">Date</option>
+                 <option value="saab">Saab</option>
+                 <option value="mercedes">Mercedes</option>
+                 <option value="audi">Audi</option>
+              </select> 
+     
+           </div>
+
+        </div>
+        <div className="head5">
+              <>
+              {data.length ? data.map((ele)=>(
+                   <div className="job-details">
+                   <div className="job-desc">
+                      <h3 style={{color:"blue"}}>{ele.jobTitle}-{ele.jobCode}</h3>
+                      <button className="apply-btn">apply</button>
+                      </div>
+                      <div className="job-head">
+                         <div className="job-head-1">
+                            <img src="Images\Location.png" alt="All jobs Logo" />
+                            <p>{ele.location}</p>      
+                            </div>
+                         <div className="job-head-2">
+                            <img src="Images\FullTime.png" alt="Full time Logo" />
+                            <p>{ele.jobType}</p>
+                         </div>
+                         <div className="job-head-3">
+                            <img src="Images\Salary.png" alt="Salary Logo" />
+                           <p> {ele.salary}</p>
+                         </div>
+                         <div className="job-head-4">
+                            <img src="Images\Building.png" alt="Building Logo" />
+                            <p>{ele.companyName}</p>
+                         </div>
+                      </div>
+                      <div className="job-content">
+                         <p> {ele.jobDescription}
+                         </p>
+                      </div>
+        
+                   </div>    
+
+              )):<div>No data</div>}
+           
+              
+              </>   
+         
+         
+        </div>
+
+         
 </div>
+
+</>
 
 
   );

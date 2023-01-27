@@ -5,9 +5,10 @@ class JobdetailController < ApplicationController
 end
 
     def create
+        time = Time.now
         v=!params[:jobTitle].empty? && !params[:jobDescription].empty? && !params[:companyName].empty?&& !params[:location].empty? &&!params[:jobType].empty? &&!params[:salary].nil? && !params[:postedDate].empty? && !params[:domain].empty?&&!params[:jobCode].empty? &&!params[:skillsRequired].empty?&& params[:applicationStatus].empty?
         if !v
-         Jobcontent.create('jobTitle': params[:jobTitle], 
+            jc = Jobcontent.create('jobTitle': params[:jobTitle], 
             'jobDescription': params[:jobDescription], 
             'companyName': params[:companyName],
             'location': params[:location], 
@@ -18,6 +19,16 @@ end
             'jobCode': params[:jobCode],
             'skillsRequired': params[:skillsRequired],
             'applicationStatus': params[:applicationStatus])
+
+            Job.create('jobcode': params[:jobCode], 
+                'jobtitle':  params[:jobTitle], 
+                'location': params[:location],
+                'posteddate': time, 
+                'applieddate': time, 
+                'status': "pending",
+                 'user_id': params[:user_id],
+                'job_id': jc.id)
+
          puts p
          render json: "true"
         else
