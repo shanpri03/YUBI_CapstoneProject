@@ -46,16 +46,13 @@ function Profile() {
     console.log(data)
     let response = await axios.post('/profile', data);
     console.log(response.data)
-    if (response.data) {
-      navigate('/dashboard')
-    } else {
-      navigate('/')
-    }
+     navigate('/')
+    
 
   }
   return (
     <>
-      {true ? (
+      {!ctx.status ? (
         <>
           <div className="profile">
 
@@ -122,10 +119,6 @@ function Profile() {
                   </select>
                 </div>
                 <div className="prof-row">
-                  <label>Experience: </label>
-                  <input type="text" name="experience" onChange={handleChange} />
-                </div>
-                <div className="prof-row">
                   <label>Current Role: </label>
                   <input type="text" name="current_role" onChange={handleChange} />
                 </div>
@@ -134,7 +127,7 @@ function Profile() {
                   <input type="number" name="exp_salary" onChange={handleChange} />
                 </div>
                 <div className="prof-row">
-                  <label>Current Role: </label>
+                  <label>Current Company: </label>
                   <input type="text" name="pref_loc" onChange={handleChange} />
                 </div>
                 <div className="prof-row">
@@ -152,7 +145,7 @@ function Profile() {
             </div>
           </div>
         </>
-      ) : <Navigate to="/" />}
+      ) : <Navigate to="/userprofile" />}
     </>
 
 

@@ -20,9 +20,9 @@ const fetchlogout =async ()=>{
            <img src="Images\HVLogo.png" alt="HV Logo"/>
           </div>
           <nav className="sec-2">
-         <div ><button onClick={navigate('/')}>DashBoard</button></div>
-          <div><button onClick={navigate('/profile')}>Application Profile</button></div>
-         <div ><button onClick={navigate('/')}>Applied jobs</button></div> 
+         <div ><button onClick={()=>{navigate('/dashboard')}}>DashBoard</button></div>
+          <div><button onClick={()=>{navigate('/userprofile')}}>Application Profile</button></div>
+         <div ><button onClick={()=>{navigate('/appliedjobs')}}>Applied jobs</button></div> 
           <div> <button>Activity</button></div> 
           <div> <button>Job Agent</button></div> 
           <div><button onClick={fetchlogout}>logout</button></div>
