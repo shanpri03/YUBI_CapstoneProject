@@ -16,20 +16,21 @@ const fetchlogout =async ()=>{
 
     return(
         <div className="launch-header">
-          <div className="sec1">
+          <div className="sec-1">
            <img src="Images\HVLogo.png" alt="HV Logo"/>
           </div>
-          <nav className="sec2">
-          <Link  to='/dashboard'><div>Dashboard</div></Link>
-          <Link to='/userprofile'> <div> Application Profile</div></Link> 
-         <div onClick={navigate('/')}> Applied Jobs </div> 
-          <div> Activity</div> 
-          <div> Job Agent</div> 
+          <nav className="sec-2">
+         <div ><button onClick={navigate('/')}>DashBoard</button></div>
+          <div><button onClick={navigate('/profile')}>Application Profile</button></div>
+         <div ><button onClick={navigate('/')}>Applied jobs</button></div> 
+          <div> <button>Activity</button></div> 
+          <div> <button>Job Agent</button></div> 
           <div><button onClick={fetchlogout}>logout</button></div>
-          </nav>
-          <div className="sec3">
+          <div className="img-sec">
           <img src="Images\SigninLogo.png" alt="Singup Logo"/>
           </div>
+          </nav>
+         
         
         </div>
     );

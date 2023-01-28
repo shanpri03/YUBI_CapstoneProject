@@ -1,66 +1,103 @@
-
-.launch-header
-{
+.launch-header {
     height: 10%;
     width: 100%;
     background-color: #006FCB;
-}
-.sec1{
-    height: 100%;
-    width: 20%;
-    padding: 0%;
     display: flex;
-    align-items: center;
-    align-content: stretch;
-    text-align:right;
-    justify-content: space-between;
-}
-
-
-.sec2>div
-{
-    
-
-font-style: normal;
-font-size: 16px ;
-line-height:24px ;
-align-items: flex-start;
-
-}
-.sec2{
-
-    display: flex;  
-    position: relative;
-    height: 70%;
-     width: 60%;
-    color: black;
-    font-weight: bold;
-    align-items: center;
-    align-content: flex-start;
-   text-align:left;
+    align-items: flex-start;
     justify-content: space-around;
-    
- 
-    
 }
-.sec3{
-     width: 7%;
-}
-.sec1>img
-{
-    height: 80%;
-    width: 70%;
-    left: 38px;
+
+.launch-header>.sec-1 {
+    width: 20%;
+    height: 100%;
+    left: 2%;
     top: 5px;
     border-radius: 0px;
-    
- }   
-.sec3>img
-{  
-    height: 5vh;
-    width:5vh;
-     padding: 0%;
+    display: flex;
+    margin-left: 20px;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.launch-header>.sec-2 {
+    width: 80%;
+    height: 100%;
+    left: 2%;
+    top: 5px;
+    border-radius: 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.launch-header>.sec-2>div {
+    height: 100%;
+    width: 20%;
+    left: 367px;
+    top: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.launch-header>.sec-2>div>button {
+    height: 100%;
+    width: 90%;
+    background-color: #006FCB;
+    left: 0px;
+    top: 0px;
+    background-color: #006FCB;
+    color: #FDFDFD;
+    font-weight: bolder;
+    border:none;
+    background: hsba(207, 79%, 96%, 1);
+
+    --hue: 207;
+    --saturation: 100%;
+    --lightness: 40%;
+    background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+}
+
+  
+
+.launch-header>.sec-2>div>button:hover{
+    --saturation: 91%;
+    --lightness: 58%;
     
 }
 
+.launch-header>.sec-1>img {
+    height: 80%;
+    width: 65%;
+    left: 38px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
 
+}
+
+
+.launch-header>.sec2> .img-sec{
+    height: 100%;
+    width: 20%;
+    left: 367px;
+    top: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+
+.launch-header >.sec-2>.img-sec >img{
+    height: 60%;
+    width: 30%;
+    padding: 0%;
+
+}
