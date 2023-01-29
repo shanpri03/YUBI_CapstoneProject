@@ -1,3 +1,19 @@
+![page-1](https://user-images.githubusercontent.com/119853244/215352505-53ed9892-4c6d-4a37-ac0a-7a26fe394ef7.png)
+![page-2](https://user-images.githubusercontent.com/119853244/215352508-67bf30f3-0b47-4ee0-a1a7-9688c52a871b.png)
+![page-3](https://user-images.githubusercontent.com/119853244/215352509-70151713-9a1e-4e5b-9cf0-d1c7eb2cdb56.png)
+![page-4](https://user-images.githubusercontent.com/119853244/215352511-e9197049-c5c2-45d7-bdef-cf23d49f20f2.png)
+![page-5](https://user-images.githubusercontent.com/119853244/215352512-346da368-81aa-4939-b153-dc5a0f2ce1a6.png)
+![page-6](https://user-images.githubusercontent.com/119853244/215352513-c21f256e-efa6-4750-8c04-4daecffa7f9f.png)
+![page-7](https://user-images.githubusercontent.com/119853244/215352514-957cfdb2-6d74-47be-88b6-dcc01c28c57c.png)
+![page-8](https://user-images.githubusercontent.com/119853244/215352515-ae6373b7-2fae-454d-94ed-ea9b8ab76181.png)
+![page-9](https://user-images.githubusercontent.com/119853244/215352517-46f12e0f-63bb-4364-9562-5c7105f46585.png)
+![page-10](https://user-images.githubusercontent.com/119853244/215352518-7e9e9316-d5be-433c-b31e-05c0a9f53372.png)
+![page-11](https://user-images.githubusercontent.com/119853244/215352519-31df95be-81eb-4d08-8b84-eb23c7f05f32.png)
+![page-12](https://user-images.githubusercontent.com/119853244/215352520-80feb4e0-7f1f-4b59-996a-39e1d9c55189.png)
+![page-13](https://user-images.githubusercontent.com/119853244/215352521-8bddedad-9511-4c5e-a43a-a32212f3afff.png)
+![page-14](https://user-images.githubusercontent.com/119853244/215352523-d2d4fdc7-7e74-4ab4-bef7-837389f5be02.png)
+![page-15](https://user-images.githubusercontent.com/119853244/215352526-1865a826-7ae7-4e97-a145-ef8ad4f557cd.png)
+![page-16](https://user-images.githubusercontent.com/119853244/215352528-d3b659e3-e600-4652-ad2e-36896a971ed7.png)
 # YUBI_CapstoneProject
 
 Title : JOB Portal Application.
