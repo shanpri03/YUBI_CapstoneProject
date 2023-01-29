@@ -114,23 +114,38 @@ To interact with database
 
 # Database Configuration in system
 1. Open cmd, run psql -U postgres
+
 2. Give the password
+ 
 3. Then create database "jobportaldb"
+ 
 4. Then run "\c jobportal" to connect to the database.
+ 
 5. run "\dt" to check the tables in db.
-4. Open the folder jobportal in vscode.
-5. Open the file database.yml and give the below configurations
+ 
+6. Open the folder jobportal in vscode.
+ 
+7. Open the file database.yml and give the below configurations
    database:jobportal
+   
    username :postgres
+   
    password :***userpassword***
+   
    port:5432
+   
    host:localhost
-6. Open the terminal and run rails s -p 3001
-7. The application opens on port 3001, click on run pending migrations. 
-8. This will create the necessary tables for the backend application.
+   
+8. Open the terminal and run rails s -p 3001
+ 
+9. The application opens on port 3001, click on run pending migrations. 
+
+10. This will create the necessary tables for the backend application.
+
 
 # Creating neccessary data in the backend using postman
  Data for job details and candidate application table.
+ 
  1. Open postman and create a post request will the url 'http://127.0.0.1:3001/jobdetail' with following params in the body
       example:
       
@@ -205,11 +220,17 @@ To interact with database
 7. The user will directed to dashboard, which will the following
 
    * All Jobs -- which will show the count of the all the jobs available
+   
    * Eligible Jobs --- shows the job based on the skill set even by user.
+   
    * Applied Jobs -- shows the jobs applied by the user
-   * Shortlisted Jobs -- shows the jobs shortlisted for the user.
+   
+   * Shortlisted Jobs -- shows the jobs shortlisted for the user
+   
    * Interviewing Jobs --shows the jobs interviewing Jobs for the user.
+   
    * Rejected Jobs --shows the rejected jobs for the user.
+   
    * Offer Recieved -- shows the offered jobs for the user.
    
 9. Dash Board  shows all the jobs for the user.
