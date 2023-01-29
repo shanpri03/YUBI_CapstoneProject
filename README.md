@@ -133,34 +133,59 @@ To interact with database
  Data for job details and candidate application table.
  1. Open postman and create a post request will the url 'http://127.0.0.1:3001/jobdetail' with following params in the body
       example:
+      
           {
         "job_title": "Senior Python Software Engineer",
+        
         "job_description": "Our client is looking for an experienced Python Software Engineer or Architect (preferably of risk and analytics experience) to join their           team and support in creating the vision and roadmap for risk/analytics development teams based on front office/enterprise/regulatory requirements and define           the strategic direction for the analytics development.",
+        
         "company_name": "Morgan McKinley",
+        
         "location": "Singapore",
+        
         "job_type": "fulltime",
+        
         "salary": 13000000,
+        
         "posted_date": "2022-06-23",
+        
         "domain": "IT",
+        
         "job_code": "PYTH-001",
+        
         "skills_required": "Python",
+        
         "application_status": "open"
+        
     }
+    
 2. This will also creat a entry jobs/canditate application table with status pending.
       example :
+      
        {
         "id": 23,
+        
         "jobcode": "PYTH-001",
+        
         "jobtitle": "Senior Python Software Engineer",
+        
         "location": "Singapore",
+        
         "posteddate": "2023-01-30",
+        
         "applieddate": "2023-01-30",
+        
         "status": "pending",
+        
         "created_at": "2023-01-29T18:51:14.920Z",
+        
         "updated_at": "2023-01-29T18:51:14.920Z",
+        
         "user_id": null,
+        
         "job_id": 6
     }
+    
   The user_id is null because the job the is not been applied any user.
 3. Another way to create entry in jobs/candidate application is when the user clicks on the "apply" button on the dashboard which will be explained later.
 
