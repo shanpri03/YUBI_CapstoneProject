@@ -20,8 +20,8 @@ end
             'skills_required': params[:skills_required],
             'application_status': params[:application_status])
 
-            Job.create('jobcode': params[:jobCode], 
-                'jobtitle':  params[:jobTitle], 
+            Job.create('jobcode': params[:job_code], 
+                'jobtitle':  params[:job_title], 
                 'location': params[:location],
                 'posteddate': time, 
                 'applieddate': time, 
@@ -41,16 +41,16 @@ end
     v=!params[:job_title].empty? && !params[:job_description].empty? && !params[:company_name].empty?&& !params[:location].empty? &&!params[:job_type].empty? &&!params[:salary].nil? && !params[:posted_date].empty? && !params[:domain].empty?&&!params[:job_code].empty? &&!params[:skills_required].empty?&& params[:application_status].empty?
     if !v
         jc = jc.update('job_title': params[:job_title], 
-        'job_description': params[:job_description], 
-        'company_name': params[:company_name],
-        'location': params[:location], 
-        'job_type': params[:job_type], 
-        'salary': params[:salary],
-        'posted_date': params[:posted_date],
-        'domain': params[:domain],
-        'job_code': params[:job_code],
-        'skills_required': params[:skills_required],
-        'application_status': params[:application_status])
+            'job_description': params[:job_description], 
+            'company_name': params[:company_name],
+            'location': params[:location], 
+            'job_type': params[:job_type], 
+            'salary': params[:salary],
+            'posted_date': params[:posted_date],
+            'domain': params[:domain],
+            'job_code': params[:job_code],
+            'skills_required': params[:skills_required],
+            'application_status': params[:application_status])
      puts p
      render json: "true"
     else
@@ -58,7 +58,7 @@ end
 end
  end
  def destroy
-    a = Jobdetail.find(params[:id].to_i)
+    a = Jobdetail.find(params[:id])
     a.destroy
     render json: "Job details deleted successfully"
 end

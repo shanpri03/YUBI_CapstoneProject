@@ -58,7 +58,7 @@ function Useraccount({setAction}) {
           <div class="form">
             <div class="login">
               <div class="login-header">
-                <h3>LOGIN</h3>
+                <h3>CREATE ACCOUNT</h3>
                 <p>Please enter your credentials to create account.</p>
               </div>
             </div>

@@ -292,49 +292,51 @@ export default function Subheader() {
                <div class="Job">
                   <select class="Jobdropdown-content">
                      <option value="Alljobs">Alljobs</option>
-                     <option value="saab">Saab</option>
-                     <option value="mercedes">Mercedes</option>
-                     <option value="audi">Audi</option>
+                     <option value="interviewing">Interviewing</option>
+                     <option value="shortlisted">Shortlisted</option>
+                     <option value="rejected">Rejected</option>
+                     <option value="offered">Offered</option>
                   </select>
-                  {/* <button>All Jobs</button>
-              <div>
-                 <p>Job1</p>
-                 <p>Job2</p>
-                 <p>Job3</p>
-              </div> */}
                </div>
                <div class="Ind">
                   <select class="Inddropdown-content">
-                     <option value="Alljobs">Industry</option>
-                     <option value="saab">Saab</option>
-                     <option value="mercedes">Mercedes</option>
-                     <option value="audi">Audi</option>
+                     <option value="industry">Industry</option>
+                     <option value="it">IT</option>
+                     <option value="infrastructure">Infrastructure</option>
+                     <option value="marketing">Marketing</option>
+                     <option value="non-IT">Non-IT</option>
+                     <option value="agriculture">Agriculture</option>
                   </select>
                </div>
                <div class="Loc">
                   <select class="Locdropdown-content">
-                     <option value="Alljobs">Location</option>
-                     <option value="saab">Saab</option>
-                     <option value="mercedes">Mercedes</option>
-                     <option value="audi">Audi</option>
+                     <option value="bangalore">Bangalore</option>
+                     <option value="chennai">Chennai</option>
+                     <option value="hyderabad">Hyderabad</option>
+                     <option value="kolkatta">Kolkatta</option>
+                     <option value="mumbai">Mumbai</option>
+                     <option value="pune">Pune</option>
                   </select>
 
                </div>
                <div class="Type">
                   <select class="Typedropdown-content">
-                     <option value="Alljobs">Type</option>
-                     <option value="saab">Saab</option>
-                     <option value="mercedes">Mercedes</option>
-                     <option value="audi">Audi</option>
+                     <option value="type">Type</option>
+                     <option value="partime">Part time</option>
+                     <option value="fulltime">Full time</option>
+                     <option value="consultant">Consultant</option>
                   </select>
                </div>
 
                <div class="Date">
                   <select class="Datedropdown-content">
                      <option value="Alljobs">Date</option>
-                     <option value="saab">Saab</option>
-                     <option value="mercedes">Mercedes</option>
-                     <option value="audi">Audi</option>
+                     <option value="jan">January</option>
+                     <option value="feb">Febrauary</option>
+                     <option value="march">March</option>
+                     <option value="april">April</option>
+                     <option value="may">May</option>
+                     <option value="june">June</option>
                   </select>
 
                </div>

@@ -24,7 +24,7 @@ function Appliedjobs()
       <>
       <Head/>
       <div className="head3">
-               <h2>All Jobs</h2>
+               <h2>Applied Jobs</h2>
                <input className='search-input' type="text" placeholder="Title,Client,Location" />
                <button name="Search" >Search</button>
             </div>

@@ -37,7 +37,7 @@ def create
      render json: "Job details not added"
     end
 else
-    jc.update('status': 'applied')
+    jc.update('status': 'applied','user_id': session[:current_user_id] )
     render json: "Job details updated"
 end
 
