@@ -226,7 +226,10 @@ To interact with database
 6. The user will directed to dashboard, which will the following
    ![page-4](https://user-images.githubusercontent.com/119853244/215352729-565ae16a-dd39-40d0-89b6-4e39949aca8a.png)
 
-
+   
+   ![page-5](https://user-images.githubusercontent.com/119853244/215352771-ea5ba496-f25b-4bc9-990c-980f8e3e2b18.png
+   
+   
    * All Jobs -- which will show the count of the all the jobs available
    
    * Eligible Jobs --- shows the job based on the skill set even by user.
@@ -244,31 +247,33 @@ To interact with database
 7. Dash Board  shows all the jobs for the user.
 
 8. For each job the user has a apply button which can be used by user to apply for the jobs.
-   ![page-5](https://user-images.githubusercontent.com/119853244/215352771-ea5ba496-f25b-4bc9-990c-980f8e3e2b18.png
+
 9. User can click on the Applied,eligible options to view the job details
-   ![page-6](https://user-images.githubusercontent.com/119853244/215352776-85a3cf40-c299-4b35-8677-35ff1eda20f4.png)
-   ![page-7](https://user-images.githubusercontent.com/119853244/215352778-5416ed3f-1d75-4e9d-902c-1cf33c0481e0.png)
+   ![page-10](https://user-images.githubusercontent.com/119853244/215353246-87ba8665-dd63-41aa-8e21-33825a4d0f6d.png)
+   ![page-11](https://user-images.githubusercontent.com/119853244/215353254-e399d09b-1d6e-4c64-aac5-2363e4b7a23b.png)
+   ![page-12](https://user-images.githubusercontent.com/119853244/215353255-f53f0dd3-e22d-460f-8547-57d6dc4a40b5.png)
+
 
 10. The status of the user application i.e, interviewing, shortlisted,rejected and offered are been updated in backend.
      ![page-13](https://user-images.githubusercontent.com/119853244/215352973-82f35df2-0ceb-4f3d-8f86-b5056fc55e01.png)
-   ![page-14](https://user-images.githubusercontent.com/119853244/215352977-c6f72d8a-4c71-4957-ad66-e42d47d324c8.png)
-   ![page-15](https://user-images.githubusercontent.com/119853244/215352978-17bf575b-6de8-4637-b092-46849670f41e.png)
-   ![page-16](https://user-images.githubusercontent.com/119853244/215352979-ea7a0cab-df0e-4864-8c97-fe1f4b1b04cd.png)
+      ![page-14](https://user-images.githubusercontent.com/119853244/215352977-c6f72d8a-4c71-4957-ad66-e42d47d324c8.png)
+      ![page-15](https://user-images.githubusercontent.com/119853244/215352978-17bf575b-6de8-4637-b092-46849670f41e.png)
+     ![page-16](https://user-images.githubusercontent.com/119853244/215352979-ea7a0cab-df0e-4864-8c97-fe1f4b1b04cd.png)
 
 
 13. List of the jobs for each status can be viewed in the respective pages when clicked on the respective options.
 
 14. Application Profile tab shows the details of the user.
-   ![page-8](https://user-images.githubusercontent.com/119853244/215352865-d65c5ee4-bb5f-4d99-af41-dd8397345499.png)
+![page-8](https://user-images.githubusercontent.com/119853244/215353293-10edf65f-428f-476c-be60-b8010111a596.png)
+
 
 
 15. Search option filters the data depending on Client,location and Job title.
-   ![page-10](https://user-images.githubusercontent.com/119853244/215353010-11d21bf6-e9ed-4254-9a18-765311584a02.png)
+  ![page-6](https://user-images.githubusercontent.com/119853244/215353361-5d3824e6-fe1c-4a96-8de8-ccc47d33b24f.png)
 
   
 16. logout tab is used to logout.
 
-# Screen shots of the applications has been updated in the git hub.
 
 
 
