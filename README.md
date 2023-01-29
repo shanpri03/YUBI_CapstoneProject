@@ -187,16 +187,23 @@ To interact with database
     }
     
   The user_id is null because the job the is not been applied any user.
+  
 3. Another way to create entry in jobs/candidate application is when the user clicks on the "apply" button on the dashboard which will be explained later.
 
 # Flow of Job Portal application
 
 1. The first page is a login page/signup page.
-2. New user can create a new account using email and password
-3. Once the account is created, the user will redirected to profile page where he can update his profile.
-4. Once the profile details are updated, the user will be redirected to login page.
-5. The user can now login
-6. The user will directed to dashboard, which will the following
+2. 
+3. New user can create a new account using email and password
+
+4. Once the account is created, the user will redirected to profile page where he can update his profile.
+
+5. Once the profile details are updated, the user will be redirected to login page.
+
+6. The user can now login
+
+7. The user will directed to dashboard, which will the following
+
    * All Jobs -- which will show the count of the all the jobs available
    * Eligible Jobs --- shows the job based on the skill set even by user.
    * Applied Jobs -- shows the jobs applied by the user
@@ -204,14 +211,22 @@ To interact with database
    * Interviewing Jobs --shows the jobs interviewing Jobs for the user.
    * Rejected Jobs --shows the rejected jobs for the user.
    * Offer Recieved -- shows the offered jobs for the user.
-7. Dash Board  shows all the jobs for the user.
-8. For each job the user has a apply button which can be used by user to apply for the jobs.
-9. User can click on the Applied,eligible options to view the job details
-10. The status of the user application i.e, interviewing, shortlisted,rejected and offered are been updated in backend.
-11. List of the jobs for each status can be viewed in the respective pages when clicked on the respective options.
-12. Application Profile tab shows the details of the user.
-13. Search option filters the data depending on Client,location and Job title.
-14. logout tab is used to logout.
+   
+9. Dash Board  shows all the jobs for the user.
+
+10. For each job the user has a apply button which can be used by user to apply for the jobs.
+
+11. User can click on the Applied,eligible options to view the job details
+
+12. The status of the user application i.e, interviewing, shortlisted,rejected and offered are been updated in backend.
+
+13. List of the jobs for each status can be viewed in the respective pages when clicked on the respective options.
+
+14. Application Profile tab shows the details of the user.
+
+15. Search option filters the data depending on Client,location and Job title.
+
+16. logout tab is used to logout.
 
 # Screen shots of the applications has been updated in the git hub.
 
