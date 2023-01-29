@@ -98,11 +98,15 @@ To interact with database
 
 1. Create a directory and open the command propmt , run the below command
       git clone https://github.com/shanpri03/YUBI_CapstoneProject.git
+      
 2.This will create the application developed.
+
 3.open the folder React_JobPortal in vs code and add proxy in package.json in line 5
        "proxy": "http://127.0.0.1:3001"
+       
 4. Then open the terminal in command prompt and run 
      npm start
+     
 5.This will get the front end running.Front page appears on localhost:3000 port.
 
 # Running Backend-Rails application
