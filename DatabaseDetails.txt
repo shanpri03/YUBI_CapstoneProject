@@ -1,18 +1,18 @@
-<<<<<<< HEAD
-database name:	jobdb
-=======
-Database name:	jobdb
->>>>>>> 568b925fd2594e5bddfe0bf938f6f44b16eb9411
+
+database name:	jobportaldb
+
+Database name:	jobportaldb
+
 
 tables:
 
-1. userAccount
+1. user
 		- id
 		- email
 		- password (in hash format)
 		- creationDate
 		- userType
-2. skillTable
+2. skillTables
 		- id
 		- skillName
 3. jobDetails
@@ -29,7 +29,7 @@ tables:
 		- skillsRequired
 		- applicationStatus
 				eg: open/closed
-4. candidateProfile
+4. profiles
 		- id
 		- firstName
 		- lastName
@@ -48,7 +48,7 @@ tables:
 		- expectedSalary
 		- preferredLocation
 
-5. candidateApplication
+5. jobs
 		- id
 		- userId
 			from candidateProfile
@@ -57,8 +57,4 @@ tables:
 		- candidateApplicationStatus
 		- location
 			(fetch from jobDetails)
-<<<<<<< HEAD
-		
-=======
-		
->>>>>>> 568b925fd2594e5bddfe0bf938f6f44b16eb9411
+
