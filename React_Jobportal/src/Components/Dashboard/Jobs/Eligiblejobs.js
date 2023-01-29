@@ -13,7 +13,7 @@ function Eligiblejobs()
   useEffect(() => {
     const fetchData = async () => {
       let res = await axios.get('/eligiblejobs');
-      setdata(res.data[0]);
+      setdata(res.data);
       setStat(true)
     }
    

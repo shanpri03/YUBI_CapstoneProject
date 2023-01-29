@@ -123,11 +123,11 @@ function Profile() {
                   <input type="text" name="current_role" onChange={handleChange} />
                 </div>
                 <div className="prof-row">
-                  <label>Expected Salary in lacs:</label>
+                  <label>Expected Salary :</label>
                   <input type="number" name="exp_salary" onChange={handleChange} />
                 </div>
                 <div className="prof-row">
-                  <label>CTC in lacs: </label>
+                  <label>CTC : </label>
                   <input type="number" name="ctc" onChange={handleChange} />
                 </div>
                 <div className="prof-row">

@@ -34,7 +34,7 @@ export default function Subheader() {
       const fetchEligible = async () => {
          let res = await axios.get('/eligiblejobs');
          console.log(res.data)
-         setElData(res.data[0]);
+         setElData(res.data);
 
 
       }

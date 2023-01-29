@@ -58,7 +58,7 @@ export default function Displayuser() {
                     </div>
                     <div className="profile-row">
                         <label>CTC: </label>
-                        <div>{ele.ctc} in lacs</div>
+                        <div>Rs. {ele.ctc} </div>
                     </div>
                     <div className="profile-row">
                         <label>Experience: </label>
@@ -74,7 +74,7 @@ export default function Displayuser() {
                     </div>
                     <div className="profile-row">
                         <label>Expected Salary: </label>
-                        <div>{ele.exp_salary} in lacs</div>
+                        <div>Rs. {ele.exp_salary} </div>
                     </div>
                     <div className="profile-row">
                         <label>Preferred Location: </label>

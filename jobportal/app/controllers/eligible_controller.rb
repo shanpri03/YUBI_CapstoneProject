@@ -10,8 +10,9 @@ class EligibleController < ApplicationController
     jobs.each{|j|
         skill.each { |s|
             jskills =j.skills_required
-            jskills.downcase.include? s.downcase
-            eljobs.push(jobs)
+            if(jskills.downcase.include? s.downcase)
+            eljobs.push(j)
+            end
         }
 
        
