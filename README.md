@@ -207,9 +207,34 @@ To interact with database
     
   The user_id is null because the job the is not been applied any user.
   
- Updating the candidate application status i.e, can interviewing,shortlisted,rejected,offered can be done in postman using PUT request with http://127.0.0.1:3001/joblist/{id}
+   Updating the candidate application  can be done in postman using POST request with url http://127.0.0.1:3001/joblist and the parameters
+   
+        {
+         
+        "jobcode": "Webetechies-Java-Spring-009",
+        
+        "jobtitle": "Java and Spring Developer",
+        
+        "location": "Pune",
+        
+        "posteddate": "2023-01-30",
+        
+        "applieddate": "2023-01-30",
+        
+        "status": "offered", 
+        
+        "user_id": 2,
+        
+        "job_id": 5
+      }
+   The details like jobcode,jobtitle,location,postdate and job_id are fetched from jobdetails table
+ 
+    Updating the candidate application status i.e, can interviewing,shortlisted,rejected,offered can be done in postman using PUT request with                    http://127.0.0.1:3001/joblist/{id}
+ 
  for the below request id will be and url:http://127.0.0.1:3001/joblist/5
-      {
+ 
+         {
+         
         "jobcode": "Webetechies-Java-Spring-009",
         
         "jobtitle": "Java and Spring Developer",
