@@ -94,8 +94,102 @@ To interact with database
 
 # Running this application on system
 
+# Running React-Frontend
+
 1. Create a directory and open the command propmt , run the below command
-      git clone 
+      git clone https://github.com/shanpri03/YUBI_CapstoneProject.git
+2.This will create the application developed.
+3.open the folder React_JobPortal in vs code and add proxy in package.json in line 5
+       "proxy": "http://127.0.0.1:3001"
+4. Then open the terminal in command prompt and run 
+     npm start
+5.This will get the front end running.Front page appears on localhost:3000 port.
+
+# Running Backend-Rails application
+
+
+# Database Configuration in system
+1. Open cmd, run psql -U postgres
+2. Give the password
+3. Then create database "jobportaldb"
+4. Then run "\c jobportal" to connect to the database.
+5. run "\dt" to check the tables in db.
+4. Open the folder jobportal in vscode.
+5. Open the file database.yml and give the below configurations
+   database:jobportal
+   username :postgres
+   password :***userpassword***
+   port:5432
+   host:localhost
+6. Open the terminal and run rails s -p 3001
+7. The application opens on port 3001, click on run pending migrations. 
+8. This will create the necessary tables for the backend application.
+
+# Creating neccessary data in the backend using postman
+ Data for job details and candidate application table.
+ 1. Open postman and create a post request will the url 'http://127.0.0.1:3001/jobdetail' with following params in the body
+      example:
+          {
+        "job_title": "Senior Python Software Engineer",
+        "job_description": "Our client is looking for an experienced Python Software Engineer or Architect (preferably of risk and analytics experience) to join their           team and support in creating the vision and roadmap for risk/analytics development teams based on front office/enterprise/regulatory requirements and define           the strategic direction for the analytics development.",
+        "company_name": "Morgan McKinley",
+        "location": "Singapore",
+        "job_type": "fulltime",
+        "salary": 13000000,
+        "posted_date": "2022-06-23",
+        "domain": "IT",
+        "job_code": "PYTH-001",
+        "skills_required": "Python",
+        "application_status": "open"
+    }
+2. This will also creat a entry jobs/canditate application table with status pending.
+      example :
+       {
+        "id": 23,
+        "jobcode": "PYTH-001",
+        "jobtitle": "Senior Python Software Engineer",
+        "location": "Singapore",
+        "posteddate": "2023-01-30",
+        "applieddate": "2023-01-30",
+        "status": "pending",
+        "created_at": "2023-01-29T18:51:14.920Z",
+        "updated_at": "2023-01-29T18:51:14.920Z",
+        "user_id": null,
+        "job_id": 6
+    }
+  The user_id is null because the job the is not been applied any user.
+3. Another way to create entry in jobs/candidate application is when the user clicks on the "apply" button on the dashboard which will be explained later.
+
+# Flow of Job Portal application
+
+1. The first page is a login page/signup page.
+2. New user can create a new account using email and password
+3. Once the account is created, the user will redirected to profile page where he can update his profile.
+4. Once the profile details are updated, the user will be redirected to login page.
+5. The user can now login
+6. The user will directed to dashboard, which will the following
+   * All Jobs -- which will show the count of the all the jobs available
+   * Eligible Jobs --- shows the job based on the skill set even by user.
+   * Applied Jobs -- shows the jobs applied by the user
+   * Shortlisted Jobs -- shows the jobs shortlisted for the user.
+   * Interviewing Jobs --shows the jobs interviewing Jobs for the user.
+   * Rejected Jobs --shows the rejected jobs for the user.
+   * Offer Recieved -- shows the offered jobs for the user.
+7. Dash Board  shows all the jobs for the user.
+8. For each job the user has a apply button which can be used by user to apply for the jobs.
+9. User can click on the Applied,eligible options to view the job details
+10. The status of the user application i.e, interviewing, shortlisted,rejected and offered are been updated in backend.
+11. List of the jobs for each status can be viewed in the respective pages when clicked on the respective options.
+12. Application Profile tab shows the details of the user.
+13. Search option filters the data depending on Client,location and Job title.
+14. logout tab is used to logout.
+
+# Screen shots of the applications has been updated in the git hub.
+
+
+
+
+
 
   
 
