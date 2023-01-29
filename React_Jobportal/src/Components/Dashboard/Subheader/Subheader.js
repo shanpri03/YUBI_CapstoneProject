@@ -4,9 +4,13 @@ import axios from "axios";
 import { Navigate, useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DataContext from "../../Context/DataContext";
+import { createRoot } from 'react-dom'
+import * as ReactDOM from 'react-dom/client';
+
 export default function Subheader() {
 
    let [data, setdata] = useState([]);
+   let [filterData, setFilterData] = useState([]);
    let [stat, setStat] = useState(false)
    let [statusData, setStatusData] = useState([])
    let [elData, setElData] = useState([])
@@ -34,30 +38,129 @@ export default function Subheader() {
 
 
       }
-     
+
       fetchData();
       fetchStatus();
       fetchEligible();
       console.log(statusData)
       console.log(elData)
    }, [stat])
+ 
+   const handleSearch = () => {
+
+      let container = null;
+      const element = (
+         <>
+            {filterData.length ? filterData.map((ele) => (
+               <div className="job-details">
+                  <div className="job-desc">
+                     <h3 style={{ color: "#006FCB" }}>{ele.job_title}-{ele.job_code}</h3>
+                     <button name='job_id' value={ele.id} className="apply-btn" onClick={handleClick}>Apply</button>
+                  </div>
+                  <div className="job-head">
+                     <div className="job-head-1">
+                        <img src="Images\placeholder.png" alt="All jobs Logo" />
+                        <p>{ele.location}</p>
+                     </div>
+                     <div className="job-head-2">
+                        <span><img src="Images\suitcase.png" alt="Full time Logo" /></span>
+                        <p>{ele.job_type}</p>
+                     </div>
+                     <div className="job-head-3">
+                        <img src="Images\Salary.png" alt="Salary Logo" />
+                        <p> {ele.salary}</p>
+                     </div>
+                     <div className="job-head-4">
+                        <img src="Images\company.png" alt="Building Logo" />
+                        <p>{ele.company_name}</p>
+                     </div>
+                  </div>
+                  <div className="job-content">
+                     <p> {ele.job_description}
+                     </p>
+                  </div>
+
+               </div>
+
+            )) : <>
+               {data.length ? data.map((ele) => (
+                  <div className="job-details">
+                     <div className="job-desc">
+                        <h3 style={{ color: "#006FCB" }}>{ele.job_title}-{ele.job_code}</h3>
+                        <button name='job_id' value={ele.id} className="apply-btn" onClick={handleClick}>Apply</button>
+                     </div>
+                     <div className="job-head">
+                        <div className="job-head-1">
+                           <img src="Images\placeholder.png" alt="All jobs Logo" />
+                           <p>{ele.location}</p>
+                        </div>
+                        <div className="job-head-2">
+                           <span><img src="Images\suitcase.png" alt="Full time Logo" /></span>
+                           <p>{ele.job_type}</p>
+                        </div>
+                        <div className="job-head-3">
+                           <img src="Images\Salary.png" alt="Salary Logo" />
+                           <p> {ele.salary}</p>
+                        </div>
+                        <div className="job-head-4">
+                           <img src="Images\company.png" alt="Building Logo" />
+                           <p>{ele.company_name}</p>
+                        </div>
+                     </div>
+                     <div className="job-content">
+                        <p> {ele.job_description}
+                        </p>
+                     </div>
+
+                  </div>
+               )) : <div> No Data</div>
+               }
+
+            </>}
+         </>
+      );
+
+
+      document.addEventListener('DOMContentLoaded', function (event) {
+         if (!container) {
+            container = document.getElementById('job-content');
+            const root = ReactDOM.createRoot(
+               document.getElementById('job-content'));
+            root.render(
+               element
+            );
+         }
+      });
+      let value = document.getElementById('search-value').value
+      console.log(value)
+      let tempData = data.filter((ele) => ele.company_name.toLowerCase() == value.toLowerCase() ||
+         ele.location.toLowerCase() == value.toLowerCase() ||
+         ele.job_title.toLowerCase() == value.toLowerCase())
+      setFilterData(tempData)
+   
+ 
+   }
 
    const handleClick = (e) => {
+      let value = e.target.value 
       let job_id = e.target.value
-      setjobCont(...jobCont, { job_id: job_id, user_id: ctx.uid })
-      console.log(setjobCont);
-      sendJobContentData();
+      let jobdata= { job_id: job_id, user_id: ctx.uid }
+      setjobCont({ job_id: job_id, user_id: ctx.uid })
+      console.log(jobCont);
+      sendJobContentData(jobdata);
+      let btn = document.getElementById("job-"+value)
+      btn.innerHTML ="applied"
+      btn.setAttribute('style',"background: #38A743")
+
 
    }
-   const sendJobContentData = async () => {
-      let res = await axios.post('/joblist', jobCont)
+   const sendJobContentData = async (jobCont) => {
+      let res = await axios.post('/updateapplied', jobCont)
       console.log(res.data)
    }
 
 
-   let shortListedData =
-
-      statusData.filter((ele) => ele.status.toLowerCase() == "shortlisted")
+   let shortListedData = statusData.filter((ele) => ele.status.toLowerCase() == "shortlisted")
    let interviewistedData = statusData.filter((ele) => ele.status.toLowerCase() == "interviewing")
    let rejectedData = statusData.filter((ele) => ele.status.toLowerCase() == "rejected")
    let appliedData = statusData.filter((ele) => ele.status.toLowerCase() == "applied")
@@ -75,9 +178,9 @@ export default function Subheader() {
                   <p>Snapshots</p>
                </div>
                <nav className="sections">
-                  <button className="sec-a-btn" onClick={()=>{navigate('/alljobs')}}>
+                  <button className="sec-a-btn" onClick={() => { navigate('/alljobs') }}>
                      <div className="sec-a">
-                     <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span> 
+                        <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span>
                         <div className="sec-a-col">
                            <span>All Jobs </span>
                            <span className="job-cnt">{data.length}</span>
@@ -89,24 +192,24 @@ export default function Subheader() {
                      </div>
                   </button>
 
-                  <button className="sec-a-btn"  onClick={()=>{navigate('/eligiblejobs')}}>
+                  <button className="sec-a-btn" onClick={() => { navigate('/eligiblejobs') }}>
                      <div className="sec-a">
-                        <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span>
+                        <span><img src="Images\eJobs.png" alt="All jobs Logo" /></span>
                         <div className="sec-a-col">
                            <span>Eligible jobs</span>
-                          <span className="job-cnt">{elData.length}</span> 
+                           <span className="job-cnt">{elData.length}</span>
                         </div>
                         <div className="arrow-col">
                            <img src="Images\arrow.png" alt="All jobs Logo" />
                         </div>
                      </div></button>
 
-                  <button className="sec-a-btn"  onClick={()=>{navigate('/appliedjobs')}}>
+                  <button className="sec-a-btn" onClick={() => { navigate('/appliedjobs') }}>
                      <div className="sec-a">
-                        <span><img src="Images\AllJobs.png" alt="Alljobs Logo" /></span>
+                        <span><img src="Images\appliedJobs.png" alt="Alljobs Logo" /></span>
                         <div className="sec-a-col">
                            <span>Applied Jobs</span>
-                          <span className="job-cnt">{appliedData.length}</span> 
+                           <span className="job-cnt">{appliedData.length}</span>
                         </div>
                         <div className="arrow-col">
                            <img src="Images\arrow.png" alt="All jobs Logo" />
@@ -122,56 +225,56 @@ export default function Subheader() {
                </div>
                <div className="sections">
 
-                  <button className="sec-a-btn"  onClick={()=>{navigate('/shortlisted')}}>
-                  <div className="sec-a">
-                     <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span>
-                     <div className="sec-a-col">
-                        <span>Shortlisted</span>
-                        <span className="job-cnt">{shortListedData.length}</span>
-                     </div>
-                     <div className="arrow-col">
+                  <button className="sec-a-btn" onClick={() => { navigate('/shortlisted') }}>
+                     <div className="sec-a">
+                        <span><img src="Images\shortlisted.png" alt="All jobs Logo" /></span>
+                        <div className="sec-a-col">
+                           <span>Shortlisted</span>
+                           <span className="job-cnt">{shortListedData.length}</span>
+                        </div>
+                        <div className="arrow-col">
                            <img src="Images\arrow.png" alt="All jobs Logo" />
                         </div>
-                  </div>
-                  </button>
-              
-                  <button className="sec-a-btn"  onClick={()=>{navigate('/interviewing')}}>
-                  <div className="sec-a">
-                     <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span>
-                     <div className="sec-a-col">
-                        <span>Interviewing</span>
-                        <span className="job-cnt">{interviewistedData.length}</span>
                      </div>
-                     <div className="arrow-col">
+                  </button>
+
+                  <button className="sec-a-btn" onClick={() => { navigate('/interviewing') }}>
+                     <div className="sec-a">
+                        <span><img src="Images\interview.png" alt="All jobs Logo" /></span>
+                        <div className="sec-a-col">
+                           <span>Interviewing</span>
+                           <span className="job-cnt">{interviewistedData.length}</span>
+                        </div>
+                        <div className="arrow-col">
                            <img src="Images\arrow.png" alt="All jobs Logo" />
                         </div>
-                  </div>
-                  </button>
-                  <button className="sec-a-btn"  onClick={()=>{navigate('/rejected')}}>
-                  <div className="sec-a">
-                     <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span>
-                     <div className="sec-a-col">
-                        <span>Rejected</span>
-                        <span className="job-cnt">{rejectedData.length}</span>
                      </div>
-                     <div className="arrow-col">
+                  </button>
+                  <button className="sec-a-btn" onClick={() => { navigate('/rejected') }}>
+                     <div className="sec-a">
+                        <span><img src="Images\reject.png" alt="All jobs Logo" /></span>
+                        <div className="sec-a-col">
+                           <span>Rejected</span>
+                           <span className="job-cnt">{rejectedData.length}</span>
+                        </div>
+                        <div className="arrow-col">
                            <img src="Images\arrow.png" alt="All jobs Logo" />
                         </div>
-                  </div>
-                  </button>
-                  <button className="sec-a-btn"  onClick={()=>{navigate('/offered')}}>
-                  <div className="sec-a">
-                    <span><img src="Images\AllJobs.png" alt="All jobs Logo" /></span> 
-                     <div className="sec-a-col">
-                        <span>Offered</span>
-                        <span className="job-cnt">{offerData.length}</span>
                      </div>
-                     <div className="arrow-col">
+                  </button>
+                  <button className="sec-a-btn" onClick={() => { navigate('/offered') }}>
+                     <div className="sec-a">
+                        <span><img src="Images\offer.png" alt="All jobs Logo" /></span>
+                        <div className="sec-a-col">
+                           <span>Offered</span>
+                           <span className="job-cnt">{offerData.length}</span>
+                        </div>
+                        <div className="arrow-col">
                            <img src="Images\arrow.png" alt="All jobs Logo" />
                         </div>
-                  </div>
+                     </div>
                   </button>
-               
+
                </div>
 
             </div>
@@ -179,8 +282,8 @@ export default function Subheader() {
 
             <div className="head3">
                <h2>All Jobs</h2>
-               <input className='search-input' type="text" placeholder="Title,Client,Location" />
-               <button name="Search" >Search</button>
+               <input className='search-input' id="search-value" type="text" placeholder="Title,Client,Location" />
+               <button name="Search" onClick={handleSearch}>Search</button>
             </div>
             <br></br>
 
@@ -237,12 +340,12 @@ export default function Subheader() {
                </div>
 
             </div>
-            <div className="head5">
+            <div className="head5" id="job-content">
                <>
-                  {data.length ? data.map((ele) => (
+                  {filterData.length ? filterData.map((ele) => (
                      <div className="job-details">
                         <div className="job-desc">
-                           <h3 style={{color:"#006FCB"}}>{ele.job_title}-{ele.job_code}</h3>
+                           <h3 style={{ color: "#006FCB" }}>{ele.job_title}-{ele.job_code}</h3>
                            <button name='job_id' value={ele.id} className="apply-btn" onClick={handleClick}>Apply</button>
                         </div>
                         <div className="job-head">
@@ -251,7 +354,7 @@ export default function Subheader() {
                               <p>{ele.location}</p>
                            </div>
                            <div className="job-head-2">
-                             <span><img src="Images\suitcase.png" alt="Full time Logo" /></span> 
+                              <span><img src="Images\suitcase.png" alt="Full time Logo" /></span>
                               <p>{ele.job_type}</p>
                            </div>
                            <div className="job-head-3">
@@ -270,7 +373,41 @@ export default function Subheader() {
 
                      </div>
 
-                  )) : <div>No data</div>}
+                  )) : <>
+                     {data.length ? data.map((ele) => (
+                        <div className="job-details">
+                           <div className="job-desc">
+                              <h3 style={{ color: "#006FCB" }}>{ele.job_title}-{ele.job_code}</h3>
+                           <button name='job_id' value={ele.id} id ={`job-${ele.id}`} className="apply-btn" onClick={handleClick}>Apply</button>                             
+                           </div>
+                           <div className="job-head">
+                              <div className="job-head-1">
+                                 <img src="Images\placeholder.png" alt="All jobs Logo" />
+                                 <p>{ele.location}</p>
+                              </div>
+                              <div className="job-head-2">
+                                 <span><img src="Images\suitcase.png" alt="Full time Logo" /></span>
+                                 <p>{ele.job_type}</p>
+                              </div>
+                              <div className="job-head-3">
+                                 <img src="Images\Salary.png" alt="Salary Logo" />
+                                 <p> {ele.salary}</p>
+                              </div>
+                              <div className="job-head-4">
+                                 <img src="Images\company.png" alt="Building Logo" />
+                                 <p>{ele.company_name}</p>
+                              </div>
+                           </div>
+                           <div className="job-content">
+                              <p> {ele.job_description}
+                              </p>
+                           </div>
+
+                        </div>
+                     )) : <div> No Data</div>
+                     }
+
+                  </>}
 
 
                </>

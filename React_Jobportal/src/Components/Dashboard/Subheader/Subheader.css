@@ -1,10 +1,12 @@
-.subheader {
+.subheader,body{
   height: 90%;
   width: 100%;
   left: 94px;
   top: 114px;
   border-radius: 0px;
   font-family: Roboto;
+  background: #D4E5FF;
+
 
   
 }
@@ -439,6 +441,7 @@ color: #006FCB;
   height: 60%;
   margin: 10px;
   background: #FFFFFF;
+  font-size: small;
 
 
 }

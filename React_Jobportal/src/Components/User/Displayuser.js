@@ -1,14 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Head from "../Dashboard/Header/Head";
 import './displayuser.css'
 
 export default function Displayuser() {
  
     let [user,setuser] = useState();
-   
-   
-    useEffect(() => {
+      
+       useEffect(() => {
        const fetchData = async () => {
           let res = await axios.get('/userprofile');
           setuser(res.data);
@@ -24,6 +23,7 @@ export default function Displayuser() {
             <div className="user-profile">
                 <div className="profile-pic">
                     <img src="Images/profile-pic.png" />
+                    <p></p>
                 </div>
                 
                 {user && user.map((ele)=>(

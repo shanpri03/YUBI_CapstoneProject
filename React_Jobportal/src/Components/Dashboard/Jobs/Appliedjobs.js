@@ -11,7 +11,7 @@ function Appliedjobs()
   let [stat,setStat] = useState(false)
   useEffect(() => {
     const fetchData = async () => {
-      let res = await axios.get('/getstatus');
+      let res = await axios.get('/getappliedjobs');
       setdata(res.data);
       setStat(true)
     }
@@ -86,7 +86,7 @@ function Appliedjobs()
                   {data.length ? data.map((ele) => (
                      <div className="job-details">
                         <div className="job-desc">
-                           <h3>{ele.jobtitle}-{ele.jobcode}</h3>
+                           <h3>{ele.job_title}-{ele.job_code}</h3>
                            <button name='job_id' style={{color:"green",border:"none"}} value={ele.id} className="apply-btn">Applied</button>
                         </div>
                         <div className="job-head">
@@ -96,7 +96,7 @@ function Appliedjobs()
                            </div>
                            <div className="job-head-2">
                              <span><img src="Images\suitcase.png" alt="Full time Logo" /></span> 
-                              <p>{ele.jobtype}</p>
+                              <p>{ele.job_type}</p>
                            </div>
                            <div className="job-head-3">
                               <img src="Images\Salary.png" alt="Salary Logo" />
@@ -104,11 +104,11 @@ function Appliedjobs()
                            </div>
                            <div className="job-head-4">
                               <img src="Images\company.png" alt="Building Logo" />
-                              <p>{ele.companyname}</p>
+                              <p>{ele.company_name}</p>
                            </div>
                         </div>
                         <div className="job-content">
-                           <p> {ele.jobdescription}
+                           <p> {ele.job_description}
                            </p>
                         </div>
 

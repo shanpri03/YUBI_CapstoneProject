@@ -11,19 +11,18 @@ console.log(ctx.status)
 console.log(ctx.email)
 console.log(ctx.id)
 let navigate = useNavigate();
+
 return(
 <>
-<Head/>
-<Subheader/>
 
-{/* {ctx.status ?(
+{ctx.status ?(
         <>
 <Head/>
 <Subheader/>
 </>
 ) :<Navigate to='/'/>
 
-} */}
+}
 </>
 ) 
 }

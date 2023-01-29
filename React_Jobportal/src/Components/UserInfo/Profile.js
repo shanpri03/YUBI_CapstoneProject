@@ -52,15 +52,15 @@ function Profile() {
   }
   return (
     <>
-      {!ctx.status ? (
+      
         <>
           <div className="profile">
 
-            <div className="prof-header">
-              <div className="header-img">
-                <img src="Images\HVLogo.png" alt="HVLogo" />
-              </div>
-            </div>
+          <div className="header-login">
+                    <div className="sec-1">
+                        <img src="Images\HVLogo.png" alt="HV Logo" />
+                    </div>
+                </div>
             <div className="prof-content">
               <div className="prof-input">
                 <div className="prof-row">
@@ -86,7 +86,7 @@ function Profile() {
                 </div>
 
                 <div className="prof-row">
-                  <label>Current Role : </label>
+                  <label>Current Company : </label>
                   <input type="text" name='current_comp' onChange={handleChange} />
                 </div>
 
@@ -127,12 +127,12 @@ function Profile() {
                   <input type="number" name="exp_salary" onChange={handleChange} />
                 </div>
                 <div className="prof-row">
-                  <label>Current Company: </label>
-                  <input type="text" name="pref_loc" onChange={handleChange} />
-                </div>
-                <div className="prof-row">
                   <label>CTC in lacs: </label>
                   <input type="number" name="ctc" onChange={handleChange} />
+                </div>
+                <div className="prof-row">
+                  <label>Preferred Location: </label>
+                  <input type="text" name="pref_loc" onChange={handleChange} />
                 </div>
                 <div className="prof-row-sub">
                   <input type="submit" className="prof-sub" onClick={sendData}></input>
@@ -145,7 +145,7 @@ function Profile() {
             </div>
           </div>
         </>
-      ) : <Navigate to="/userprofile" />}
+      
     </>
 
 

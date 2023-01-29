@@ -1,11 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Launchpage from "./Components/Home/Launchpage.js";
-import Loginpage from './Components/Home/Loginpage';
 import Useraccount from './Components/UserInfo/Useraccount';
 import Profile from './Components/UserInfo/Profile'
 import Head from './Components/Dashboard/Header/Head';
-import Subheader from './Components/Dashboard/Subheader/Subheader-1';
 import Appliedjobs from './Components/Dashboard/Jobs/Appliedjobs';
 import Alljobs from './Components/Dashboard/Jobs/Alljobs';
 import Eligiblejobs from './Components/Dashboard/Jobs/Eligiblejobs';
@@ -16,6 +14,7 @@ import Offered from './Components/Dashboard/Application/Offered';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Displayuser from './Components/User/Displayuser';
 import DataContext from './Components/Context/DataContext';
+import Login from './Components/Home/Login';
 import { useState } from 'react';
 
 
@@ -30,7 +29,7 @@ function App() {
       <DataContext.Provider value={{status,setStatus,email,setEmail,uid,setUid}}>
       <Routes>
       <Route path='/' element={<Launchpage />}></Route>
-        <Route path='/login' element={<Loginpage />}></Route>
+        <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Useraccount />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>

@@ -7,10 +7,12 @@
   
 
 }
-
+body{
+    background-color: #FFFFFF;
+}
 .prof-header {
     width: 100%;
-    height: 10%;
+    height: 20%;
     background-color: blue;
 }
 
@@ -33,6 +35,7 @@
 width:100%;
 height: 100%;
 
+
 }
 
 .prof-content>.prof-input>.prof-row,.prof-row-sub{
@@ -46,10 +49,16 @@ height: 100%;
 
 .prof-content>.prof-input>.prof-row>input,select{
     width: 30%;
-    height: 50%;
-    border-radius: 10px;
+    height: 70%;
     margin-left: 10px;
     padding: 5px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    
 
 
 }
@@ -59,7 +68,11 @@ height: 100%;
     border-radius: 10px;
     margin-left: 10px;
     padding: 5px;
-
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .prof-content>.prof-input>.prof-row>textarea {
@@ -69,14 +82,20 @@ height: 100%;
     border-radius: 10px;
     margin-left: 10px;
     margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
 
 }
 
 .prof-content>.prof-input>.prof-row>label {
-    width:13%;
+    width:15%;
     height: 50%;
     font-weight: bolder;
-    font-size: medium;
+    font-size: 15px;
    
 
 }
@@ -85,13 +104,28 @@ height: 100%;
     margin-bottom: 10px;
 }
 .prof-row-sub>.prof-sub {
-    width: 100px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background-color: #349EF5;
+    background-image: linear-gradient(45deg,#349EF5,#006FCB);
+    width: 15%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+
+
+    /* width: 100px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background: #006FCB;
+    background: #006FCB; */
 
    }
 
