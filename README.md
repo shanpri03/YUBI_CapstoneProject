@@ -1,19 +1,4 @@
-![page-1](https://user-images.githubusercontent.com/119853244/215352505-53ed9892-4c6d-4a37-ac0a-7a26fe394ef7.png)
-![page-2](https://user-images.githubusercontent.com/119853244/215352508-67bf30f3-0b47-4ee0-a1a7-9688c52a871b.png)
-![page-3](https://user-images.githubusercontent.com/119853244/215352509-70151713-9a1e-4e5b-9cf0-d1c7eb2cdb56.png)
-![page-4](https://user-images.githubusercontent.com/119853244/215352511-e9197049-c5c2-45d7-bdef-cf23d49f20f2.png)
-![page-5](https://user-images.githubusercontent.com/119853244/215352512-346da368-81aa-4939-b153-dc5a0f2ce1a6.png)
-![page-6](https://user-images.githubusercontent.com/119853244/215352513-c21f256e-efa6-4750-8c04-4daecffa7f9f.png)
-![page-7](https://user-images.githubusercontent.com/119853244/215352514-957cfdb2-6d74-47be-88b6-dcc01c28c57c.png)
-![page-8](https://user-images.githubusercontent.com/119853244/215352515-ae6373b7-2fae-454d-94ed-ea9b8ab76181.png)
-![page-9](https://user-images.githubusercontent.com/119853244/215352517-46f12e0f-63bb-4364-9562-5c7105f46585.png)
-![page-10](https://user-images.githubusercontent.com/119853244/215352518-7e9e9316-d5be-433c-b31e-05c0a9f53372.png)
-![page-11](https://user-images.githubusercontent.com/119853244/215352519-31df95be-81eb-4d08-8b84-eb23c7f05f32.png)
-![page-12](https://user-images.githubusercontent.com/119853244/215352520-80feb4e0-7f1f-4b59-996a-39e1d9c55189.png)
-![page-13](https://user-images.githubusercontent.com/119853244/215352521-8bddedad-9511-4c5e-a43a-a32212f3afff.png)
-![page-14](https://user-images.githubusercontent.com/119853244/215352523-d2d4fdc7-7e74-4ab4-bef7-837389f5be02.png)
-![page-15](https://user-images.githubusercontent.com/119853244/215352526-1865a826-7ae7-4e97-a145-ef8ad4f557cd.png)
-![page-16](https://user-images.githubusercontent.com/119853244/215352528-d3b659e3-e600-4652-ad2e-36896a971ed7.png)
+
 # YUBI_CapstoneProject
 
 Title : JOB Portal Application.
@@ -224,16 +209,23 @@ To interact with database
 # Flow of Job Portal application
 
 1. The first page is a login page/signup page.
-2. 
-3. New user can create a new account using email and password
 
-4. Once the account is created, the user will redirected to profile page where he can update his profile.
+![page-1](https://user-images.githubusercontent.com/119853244/215352632-eacb6620-95b1-4a03-a56d-e53d7df7b6d2.png)
 
-5. Once the profile details are updated, the user will be redirected to login page.
+2. New user can create a new account using email and password
+![page-2](https://user-images.githubusercontent.com/119853244/215352645-05926577-4cac-459b-a518-57358900ba72.png)
 
-6. The user can now login
+3. Once the account is created, the user will redirected to profile page where he can update his profile
+![page-3](https://user-images.githubusercontent.com/119853244/215352657-159af95d-082d-44a4-8bb3-19754137e225.png)
 
-7. The user will directed to dashboard, which will the following
+
+4. Once the profile details are updated, the user will be redirected to login page.
+
+5. The user can now login
+
+6. The user will directed to dashboard, which will the following
+   ![page-4](https://user-images.githubusercontent.com/119853244/215352729-565ae16a-dd39-40d0-89b6-4e39949aca8a.png)
+
 
    * All Jobs -- which will show the count of the all the jobs available
    
@@ -249,20 +241,31 @@ To interact with database
    
    * Offer Recieved -- shows the offered jobs for the user.
    
-9. Dash Board  shows all the jobs for the user.
+7. Dash Board  shows all the jobs for the user.
 
-10. For each job the user has a apply button which can be used by user to apply for the jobs.
+8. For each job the user has a apply button which can be used by user to apply for the jobs.
+   ![page-5](https://user-images.githubusercontent.com/119853244/215352771-ea5ba496-f25b-4bc9-990c-980f8e3e2b18.png
+9. User can click on the Applied,eligible options to view the job details
+   ![page-6](https://user-images.githubusercontent.com/119853244/215352776-85a3cf40-c299-4b35-8677-35ff1eda20f4.png)
+   ![page-7](https://user-images.githubusercontent.com/119853244/215352778-5416ed3f-1d75-4e9d-902c-1cf33c0481e0.png)
 
-11. User can click on the Applied,eligible options to view the job details
+10. The status of the user application i.e, interviewing, shortlisted,rejected and offered are been updated in backend.
+     ![page-13](https://user-images.githubusercontent.com/119853244/215352973-82f35df2-0ceb-4f3d-8f86-b5056fc55e01.png)
+   ![page-14](https://user-images.githubusercontent.com/119853244/215352977-c6f72d8a-4c71-4957-ad66-e42d47d324c8.png)
+   ![page-15](https://user-images.githubusercontent.com/119853244/215352978-17bf575b-6de8-4637-b092-46849670f41e.png)
+   ![page-16](https://user-images.githubusercontent.com/119853244/215352979-ea7a0cab-df0e-4864-8c97-fe1f4b1b04cd.png)
 
-12. The status of the user application i.e, interviewing, shortlisted,rejected and offered are been updated in backend.
 
 13. List of the jobs for each status can be viewed in the respective pages when clicked on the respective options.
 
 14. Application Profile tab shows the details of the user.
+   ![page-8](https://user-images.githubusercontent.com/119853244/215352865-d65c5ee4-bb5f-4d99-af41-dd8397345499.png)
+
 
 15. Search option filters the data depending on Client,location and Job title.
+   ![page-10](https://user-images.githubusercontent.com/119853244/215353010-11d21bf6-e9ed-4254-9a18-765311584a02.png)
 
+  
 16. logout tab is used to logout.
 
 # Screen shots of the applications has been updated in the git hub.
