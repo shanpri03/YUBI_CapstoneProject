@@ -7,9 +7,9 @@ Tool Used.
    Back End : Ruby on Rails, 
    Database : postgresql
 
-Contributed by : Sowmiya and Priya.
+Contributed by : Sowmya and Priya.
 
-About React.
+# About React.
 
 The main objective of ReactJS is to develop User Interfaces (UI) that improves the speed of the apps. It uses virtual DOM.
 
@@ -38,7 +38,7 @@ Install React using create-react-app, a tool that installs all of the dependenci
  
  If the version is displayed, we are ready to build awesome websites and app.
 
-About Rails.
+# About Rails.
 
 Rails is a web application development framework written in the Ruby programming language.
 
@@ -63,7 +63,7 @@ Installing Rails and psql database
    password
 
 2. Open a terminal, navigate to a directory where you want to create Rails application and run the command to create application connected to psql
-   rails new application_name -d postgresql
+  # rails new application_name -d postgresql
    
 3. This will open a new applicaion using preferred editor VS Code. Get your Rails application server running, 
 by the command : rails s
@@ -91,6 +91,11 @@ To migrate the file
     
 To interact with database
     rails c
+
+# Running this application on system
+
+1. Create a directory and open the command propmt , run the below command
+      git clone 
 
   
 
